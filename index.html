@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy – DupeFire</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --bg: #f5f2ee;
+      --surface: #ffffff;
+      --accent: #2d5be3;
+      --accent-light: #e8eefb;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --border: #e2ddd8;
+      --warning-bg: #fff8e1;
+      --warning-border: #f59e0b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    .lang-bar {
+      background: var(--text);
+      display: flex;
+      justify-content: flex-end;
+      padding: 0.5rem 1.5rem;
+      gap: 0.4rem;
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.6);
+      border-radius: 6px;
+      padding: 0.25rem 0.7rem;
+      font-size: 0.8rem;
+      font-family: 'DM Sans', sans-serif;
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.04em;
+    }
+
+    .lang-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .lang-btn:hover:not(.active) {
+      border-color: rgba(255,255,255,0.6);
+      color: white;
+    }
+
+    header {
+      background: var(--text);
+      color: white;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: -60px;
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: rgba(45,91,227,0.15);
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -40px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(45,91,227,0.1);
+    }
+
+    .app-icon {
+      width: 72px; height: 72px;
+      background: var(--accent);
+      border-radius: 18px;
+      margin: 0 auto 1.25rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      position: relative; z-index: 1;
+      box-shadow: 0 8px 24px rgba(45,91,227,0.4);
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      position: relative; z-index: 1;
+    }
+
+    header p {
+      margin-top: 0.5rem;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.9rem;
+      position: relative; z-index: 1;
+    }
+
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .update-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--accent-light);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 0.3rem 0.9rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+
+    .intro-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem 2rem 1.75rem;
+      margin-bottom: 1.25rem;
+      transition: box-shadow 0.2s;
+    }
+
+    section:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .section-icon {
+      width: 38px; height: 38px;
+      background: var(--accent-light);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--text);
+    }
+
+    p { font-size: 0.93rem; color: #374151; margin-bottom: 0.75rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul { list-style: none; padding: 0; margin: 0.5rem 0; }
+
+    ul li {
+      font-size: 0.93rem;
+      color: #374151;
+      padding: 0.3rem 0 0.3rem 1.4rem;
+      position: relative;
+    }
+
+    ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .highlight-box {
+      background: var(--accent-light);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      font-size: 0.9rem;
+      color: #1e3a8a;
+    }
+
+    .warning-box {
+      background: var(--warning-bg);
+      border: 1px solid var(--warning-border);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      font-size: 0.9rem;
+      color: #78350f;
+    }
+
+    .permission-grid { display: grid; gap: 0.6rem; margin: 0.75rem 0; }
+
+    .permission-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      background: #f9f9fb;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+    }
+
+    .permission-name {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--accent);
+      background: var(--accent-light);
+      border-radius: 6px;
+      padding: 0.2rem 0.5rem;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+
+    .permission-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.5; }
+
+    .no-data-list { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.75rem; }
+
+    .no-data-tag {
+      background: #f0fdf4;
+      border: 1px solid #86efac;
+      color: #166534;
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(45,91,227,0.3); }
+    a:hover { border-bottom-color: var(--accent); }
+
+    .contact-card {
+      background: var(--text);
+      color: white;
+      border-radius: 16px;
+      padding: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .contact-card h2 { color: white; margin-bottom: 0.5rem; }
+    .contact-card p { color: rgba(255,255,255,0.65); font-size: 0.9rem; }
+    .contact-card a { color: #93b4ff; border-bottom-color: rgba(147,180,255,0.4); font-weight: 500; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    footer a { color: var(--muted); font-size: 0.8rem; }
+
+    /* Language system */
+    .es, .en { display: none; }
+    .lang-es .es { display: block; }
+    .lang-en .en { display: block; }
+    .lang-es span.es { display: inline; }
+    .lang-en span.en { display: inline; }
+
+    @media (max-width: 600px) {
+      section { padding: 1.5rem 1.25rem; }
+      .permission-item { flex-direction: column; gap: 0.4rem; }
+    }
+  </style>
+</head>
+<body class="lang-es">
+
+<div class="lang-bar">
+  <button class="lang-btn active" onclick="setLang('es')">ES</button>
+  <button class="lang-btn" onclick="setLang('en')">EN</button>
+</div>
+
+<header>
+  <div class="app-icon">🔥</div>
+  <h1>
+    <span class="es">Política de Privacidad</span>
+    <span class="en">Privacy Policy</span>
+  </h1>
+  <p>DupeFire · Daniel Barea</p>
+</header>
+
+<div class="container">
+
+  <div class="update-badge">
+    <span class="es">📅 Última actualización: 27 de abril de 2026</span>
+    <span class="en">📅 Effective date: 2026-04-27</span>
+  </div>
+
+  <div class="intro-card">
+    <p class="es">Esta política de privacidad aplica a la app <strong>DupeFire</strong>, creada por <strong>Daniel Barea</strong> como servicio con soporte de anuncios. Nos comprometemos a proteger tu privacidad: todo el procesamiento de archivos se realiza <strong>localmente en tu dispositivo</strong> y no recopilamos datos personales propios.</p>
+    <p class="en">This privacy policy applies to the <strong>DupeFire</strong> app, created by <strong>Daniel Barea</strong> as an ad-supported service. We are committed to protecting your privacy: all file processing is done <strong>locally on your device</strong> and we do not collect personal data of our own.</p>
+  </div>
+
+  <!-- 1. INFORMATION COLLECTED -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📊</div>
+      <h2>
+        <span class="es">Información recopilada</span>
+        <span class="en">Information Collection and Use</span>
+      </h2>
+    </div>
+    <div class="es">
+      <p>La app puede recopilar automáticamente cierta información técnica al usarla, como:</p>
+      <ul>
+        <li>Dirección IP del dispositivo</li>
+        <li>Sistema operativo utilizado</li>
+        <li>Tiempo de uso de la aplicación</li>
+        <li>Información de interacción con anuncios (gestionada por AdMob)</li>
+      </ul>
+      <div class="highlight-box">✅ La app <strong>no recopila información de ubicación precisa</strong> ni utiliza Inteligencia Artificial para procesar tus datos.</div>
+      <p>Todos los archivos (fotos, vídeos, documentos) son analizados exclusivamente en tu dispositivo. Ningún contenido se envía a servidores externos.</p>
+    </div>
+    <div class="en">
+      <p>The Application may automatically collect certain technical information when you use it, such as:</p>
+      <ul>
+        <li>Your device's Internet Protocol address (IP address)</li>
+        <li>Operating system used on your mobile device</li>
+        <li>Time spent on the Application</li>
+        <li>Ad interaction data (managed by AdMob)</li>
+      </ul>
+      <div class="highlight-box">✅ The Application does <strong>not gather precise location information</strong> and does not use Artificial Intelligence (AI) technologies to process your data.</div>
+      <p>All files (photos, videos, documents) are analyzed exclusively on your device. No content is sent to external servers.</p>
+    </div>
+  </section>
+
+  <!-- 2. LOCAL PROCESSING -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📱</div>
+      <h2>
+        <span class="es">Procesamiento local en tu dispositivo</span>
+        <span class="en">Local Processing on Your Device</span>
+      </h2>
+    </div>
+    <div class="es">
+      <p>DupeFire funciona completamente de forma local. Todas las operaciones se ejecutan exclusivamente en tu dispositivo:</p>
+      <ul>
+        <li>El análisis de duplicados mediante hash se realiza localmente</li>
+        <li>La compresión de imágenes y vídeos se realiza localmente</li>
+        <li>Ningún archivo, foto, vídeo o documento se envía a servidores externos</li>
+        <li>No disponemos de servidores propios que reciban datos de la app</li>
+      </ul>
+      <div class="highlight-box">✅ Tus archivos nunca abandonan tu dispositivo. Solo tú tienes acceso a ellos.</div>
+    </div>
+    <div class="en">
+      <p>DupeFire works entirely locally. All operations are performed exclusively on your device:</p>
+      <ul>
+        <li>Duplicate detection using hash algorithms is performed locally</li>
+        <li>Image and video compression is performed locally</li>
+        <li>No file, photo, video or document is sent to external servers</li>
+        <li>We do not operate servers that receive data from the app</li>
+      </ul>
+      <div class="highlight-box">✅ Your files never leave your device. Only you have access to them.</div>
+    </div>
+  </section>
+
+  <!-- 3. DATA NOT COLLECTED -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🚫</div>
+      <h2>
+        <span class="es">Datos que no recopilamos</span>
+        <span class="en">Data We Do Not Collect</span>
+      </h2>
+    </div>
+    <div class="es">
+      <p>No recopilamos, almacenamos ni procesamos ninguno de los siguientes datos:</p>
+      <div class="no-data-list">
+        <span class="no-data-tag">❌ Nombre o identidad</span>
+        <span class="no-data-tag">❌ Correo electrónico</span>
+        <span class="no-data-tag">❌ Número de teléfono</span>
+        <span class="no-data-tag">❌ Ubicación precisa</span>
+        <span class="no-data-tag">❌ Contenido de archivos</span>
+        <span class="no-data-tag">❌ Cuentas de usuario</span>
+        <span class="no-data-tag">❌ Historial de navegación</span>
+        <span class="no-data-tag">❌ Datos biométricos</span>
+      </div>
+    </div>
+    <div class="en">
+      <p>We do not collect, store or process any of the following data:</p>
+      <div class="no-data-list">
+        <span class="no-data-tag">❌ Name or identity</span>
+        <span class="no-data-tag">❌ Email address</span>
+        <span class="no-data-tag">❌ Phone number</span>
+        <span class="no-data-tag">❌ Precise location</span>
+        <span class="no-data-tag">❌ File contents</span>
+        <span class="no-data-tag">❌ User accounts</span>
+        <span class="no-data-tag">❌ Browsing history</span>
+        <span class="no-data-tag">❌ Biometric data</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PERMISSIONS -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🔐</div>
+      <h2>
+        <span class="es">Permisos del dispositivo</span>
+        <span class="en">Device Permissions</span>
+      </h2>
+    </div>
+    <p class="es">La app solicita los siguientes permisos, usados exclusivamente para su funcionalidad principal:</p>
+    <p class="en">The app requests the following permissions, used exclusively for its core functionality:</p>
+    <div class="permission-grid">
+      <div class="permission-item">
+        <span class="permission-name">READ_MEDIA_IMAGES</span>
+        <span class="permission-desc">
+          <span class="es">Detectar imágenes duplicadas y comprimirlas</span>
+          <span class="en">Detect duplicate images and compress them</span>
+        </span>
+      </div>
+      <div class="permission-item">
+        <span class="permission-name">READ_MEDIA_VIDEO</span>
+        <span class="permission-desc">
+          <span class="es">Detectar vídeos duplicados y comprimirlos</span>
+          <span class="en">Detect duplicate videos and compress them</span>
+        </span>
+      </div>
+      <div class="permission-item">
+        <span class="permission-name">READ_EXTERNAL_STORAGE</span>
+        <span class="permission-desc">
+          <span class="es">Acceder a documentos y detectar duplicados</span>
+          <span class="en">Access documents and detect duplicates</span>
+        </span>
+      </div>
+      <div class="permission-item">
+        <span class="permission-name">WRITE_EXTERNAL_STORAGE</span>
+        <span class="permission-desc">
+          <span class="es">Eliminar duplicados y guardar archivos comprimidos</span>
+          <span class="en">Delete duplicate files and save compressed files</span>
+        </span>
+      </div>
+    </div>
+    <div class="highlight-box">
+      <span class="es">Estos permisos no se usan para recopilar información. Solo se accede a los archivos cuando el usuario lo solicita explícitamente.</span>
+      <span class="en">These permissions are not used to collect information. Files are only accessed when explicitly requested by the user.</span>
+    </div>
+  </section>
+
+  <!-- 5. ADMOB & THIRD PARTIES -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">📢</div>
+      <h2>
+        <span class="es">Publicidad y servicios de terceros</span>
+        <span class="en">Advertising &amp; Third Party Access</span>
+      </h2>
+    </div>
+    <div class="es">
+      <p>DupeFire utiliza <strong>Google AdMob</strong> para mostrar anuncios. Solo se comparten datos agregados y anonimizados con servicios externos. El proveedor puede divulgar información cuando lo exija la ley, para proteger derechos o seguridad, o con proveedores de confianza bajo acuerdos de confidencialidad.</p>
+      <p>Los datos que AdMob puede recopilar incluyen:</p>
+      <ul>
+        <li>Identificadores de publicidad del dispositivo (Advertising ID)</li>
+        <li>Información sobre interacciones con anuncios</li>
+        <li>Datos técnicos del dispositivo (modelo, sistema operativo)</li>
+        <li>Dirección IP aproximada</li>
+      </ul>
+      <div class="warning-box">⚠️ La primera vez que abras la app, se mostrará un formulario de consentimiento requerido por el RGPD europeo para elegir entre anuncios personalizados o no personalizados.</div>
+      <p>Consulta la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a>, la política de <a href="https://support.google.com/admob/answer/6128543?hl=es" target="_blank" rel="noopener">AdMob</a> y gestiona tus preferencias en <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+    </div>
+    <div class="en">
+      <p>DupeFire uses <strong>Google AdMob</strong> to display advertisements. Only aggregated, anonymized data is shared with external services. The Service Provider may disclose information as required by law, to protect rights or safety, or with trusted service providers under confidentiality agreements.</p>
+      <p>Data that AdMob may collect includes:</p>
+      <ul>
+        <li>Device advertising identifiers (Advertising ID)</li>
+        <li>Ad interaction information</li>
+        <li>Technical device data (model, operating system)</li>
+        <li>Approximate IP address</li>
+      </ul>
+      <div class="warning-box">⚠️ The first time you open the app, a consent form required by EU GDPR will be shown so you can choose between personalized or non-personalized ads.</div>
+      <p>See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>, <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener">AdMob's policy</a>, and manage your ad preferences at <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+    </div>
+  </section>
+
+  <!-- 6. OPT-OUT -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🚪</div>
+      <h2>
+        <span class="es">Derecho de exclusión</span>
+        <span class="en">Opt-Out Rights</span>
+      </h2>
+    </div>
+    <p class="es">Puedes detener toda recopilación de información desinstalando la app mediante el proceso estándar de desinstalación de tu dispositivo o a través de la tienda de aplicaciones.</p>
+    <p class="en">You can stop all collection of information by uninstalling the Application using the standard uninstall processes available on your mobile device or via the mobile application marketplace.</p>
+  </section>
+
+  <!-- 7. DATA RETENTION -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🗄️</div>
+      <h2>
+        <span class="es">Retención de datos</span>
+        <span class="en">Data Retention Policy</span>
+      </h2>
+    </div>
+    <p class="es">El proveedor del servicio conservará los datos mientras uses la aplicación y durante un tiempo razonable después. Si deseas que se eliminen, contacta en <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> y responderemos en un plazo razonable.</p>
+    <p class="en">The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. To request deletion, contact <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> and they will respond in a reasonable time.</p>
+  </section>
+
+  <!-- 8. CHILDREN -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">👶</div>
+      <h2>
+        <span class="es">Menores de edad</span>
+        <span class="en">Children</span>
+      </h2>
+    </div>
+    <p class="es">DupeFire no está dirigida a menores de 13 años. No recopilamos conscientemente información de menores. Si eres padre o tutor y crees que tu hijo ha proporcionado información personal, contáctanos en <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> para eliminarla inmediatamente.</p>
+    <p class="en">DupeFire does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and aware that your child has provided personal information, contact us at <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> so we can take the necessary actions.</p>
+  </section>
+
+  <!-- 9. SECURITY -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🛡️</div>
+      <h2>
+        <span class="es">Seguridad</span>
+        <span class="en">Security</span>
+      </h2>
+    </div>
+    <p class="es">El proveedor del servicio aplica salvaguardas físicas, electrónicas y procedimentales para proteger la confidencialidad de tu información.</p>
+    <p class="en">The Service Provider provides physical, electronic, and procedural safeguards to protect the confidentiality of your information.</p>
+  </section>
+
+  <!-- 10. CHANGES -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">🔄</div>
+      <h2>
+        <span class="es">Cambios en esta política</span>
+        <span class="en">Changes</span>
+      </h2>
+    </div>
+    <p class="es">Esta política puede actualizarse ocasionalmente. Se notificará cualquier cambio actualizando esta página. El uso continuado de la app implica la aceptación de los cambios. Vigente desde el <strong>27 de abril de 2026</strong>.</p>
+    <p class="en">This Privacy Policy may be updated from time to time. You will be notified of changes by updating this page. Continued use is deemed approval of all changes. Effective as of <strong>2026-04-27</strong>.</p>
+  </section>
+
+  <!-- 11. CONSENT -->
+  <section>
+    <div class="section-header">
+      <div class="section-icon">✅</div>
+      <h2>
+        <span class="es">Tu consentimiento</span>
+        <span class="en">Your Consent</span>
+      </h2>
+    </div>
+    <p class="es">Al usar la aplicación, consientes el procesamiento de tu información tal como se establece en esta política, tanto ahora como en futuras modificaciones.</p>
+    <p class="en">By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+  </section>
+
+  <!-- CONTACT -->
+  <div class="contact-card">
+    <div class="section-header" style="justify-content:center; margin-bottom:0.75rem;">
+      <div class="section-icon" style="background:rgba(255,255,255,0.1);">✉️</div>
+      <h2>
+        <span class="es">Contacto</span>
+        <span class="en">Contact Us</span>
+      </h2>
+    </div>
+    <p class="es">Si tienes cualquier pregunta sobre esta política de privacidad, contacta con el proveedor del servicio:</p>
+    <p class="en">If you have any questions regarding privacy while using the Application, please contact the Service Provider:</p>
+    <p style="margin-top:0.75rem;"><a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a></p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 DupeFire · Daniel Barea ·
+  <span class="es">Todos los derechos reservados</span>
+  <span class="en">All rights reserved</span>
+  <br><br>
+  <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noopener">Generated with App Privacy Policy Generator</a>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.body.className = 'lang-' + lang;
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+    document.querySelector('.lang-btn[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
+  }
+</script>
+
+</body>
+</html>
