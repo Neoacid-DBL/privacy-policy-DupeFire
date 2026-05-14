@@ -12,6 +12,13 @@
   <link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/"/>
   <link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/"/>
   <link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/"/>
+  <link rel="alternate" hreflang="de" href="https://neoacid-dbl.github.io/DupeFire/"/>
+  <link rel="alternate" hreflang="fr" href="https://neoacid-dbl.github.io/DupeFire/"/>
+  <link rel="alternate" hreflang="hi" href="https://neoacid-dbl.github.io/DupeFire/"/>
+  <link rel="alternate" hreflang="ja" href="https://neoacid-dbl.github.io/DupeFire/"/>
+  <link rel="alternate" hreflang="zh" href="https://neoacid-dbl.github.io/DupeFire/"/>
+  <link rel="alternate" hreflang="ar" href="https://neoacid-dbl.github.io/DupeFire/"/>
+  <link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/"/>
   <link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/"/>
 
   <!-- Open Graph -->
@@ -20,7 +27,6 @@
   <meta property="og:title" content="Política de Privacidad – DupeFire"/>
   <meta property="og:description" content="Política de privacidad de DupeFire. Todo el análisis de duplicados se realiza localmente en tu dispositivo. No recopilamos datos personales."/>
   <meta property="og:locale" content="es_ES"/>
-  <meta property="og:locale:alternate" content="en_US"/>
   <meta property="og:site_name" content="DupeFire"/>
 
   <!-- Twitter Card -->
@@ -36,32 +42,19 @@
     "name": "Política de Privacidad – DupeFire",
     "description": "Política de privacidad de DupeFire, la app Android para eliminar archivos duplicados. Todo el procesamiento es local en tu dispositivo.",
     "url": "https://neoacid-dbl.github.io/DupeFire/",
-    "inLanguage": ["es", "en"],
+    "inLanguage": ["es", "en", "de", "fr", "hi", "ja", "zh", "ar", "pt"],
     "author": {
       "@type": "Person",
       "name": "Daniel Barea",
       "email": "danibarea@gmail.com"
     },
-    "publisher": {
-      "@type": "Person",
-      "name": "Daniel Barea"
-    },
+    "publisher": { "@type": "Person", "name": "Daniel Barea" },
     "dateModified": "2026-04-27",
     "breadcrumb": {
       "@type": "BreadcrumbList",
       "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "DupeFire",
-          "item": "https://neoacid-dbl.github.io/DupeFire/app.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Política de Privacidad",
-          "item": "https://neoacid-dbl.github.io/DupeFire/"
-        }
+        { "@type": "ListItem", "position": 1, "name": "DupeFire", "item": "https://neoacid-dbl.github.io/DupeFire/app.html" },
+        { "@type": "ListItem", "position": 2, "name": "Política de Privacidad", "item": "https://neoacid-dbl.github.io/DupeFire/" }
       ]
     }
   }
@@ -101,6 +94,7 @@
       justify-content: flex-end;
       padding: 0.5rem 1.5rem;
       gap: 0.4rem;
+      flex-wrap: wrap;
     }
 
     .lang-btn {
@@ -348,11 +342,29 @@
     footer a { color: var(--muted); font-size: 0.8rem; }
 
     /* Language system */
-    .es, .en { display: none; }
+    .es, .en, .de, .fr, .hi, .ja, .zh, .ar, .pt { display: none; }
+
     .lang-es .es { display: block; }
     .lang-en .en { display: block; }
-    .lang-es span.es { display: inline; }
-    .lang-en span.en { display: inline; }
+    .lang-de .de { display: block; }
+    .lang-fr .fr { display: block; }
+    .lang-hi .hi { display: block; }
+    .lang-ja .ja { display: block; }
+    .lang-zh .zh { display: block; }
+    .lang-ar .ar { display: block; }
+    .lang-pt .pt { display: block; }
+
+    .lang-es span.es, .lang-en span.en, .lang-de span.de,
+    .lang-fr span.fr, .lang-hi span.hi, .lang-ja span.ja,
+    .lang-zh span.zh, .lang-ar span.ar, .lang-pt span.pt { display: inline; }
+
+    /* RTL (Arabic) */
+    .lang-ar { direction: rtl; }
+    .lang-ar .lang-bar { justify-content: flex-start; }
+    .lang-ar .section-header { flex-direction: row-reverse; }
+    .lang-ar ul li { padding: 0.3rem 1.4rem 0.3rem 0; }
+    .lang-ar ul li::before { left: auto; right: 0; content: '←'; }
+    .lang-ar .permission-item { flex-direction: row-reverse; }
 
     @media (max-width: 600px) {
       section { padding: 1.5rem 1.25rem; }
@@ -365,6 +377,13 @@
 <div class="lang-bar">
   <button class="lang-btn active" onclick="setLang('es')">ES</button>
   <button class="lang-btn" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" onclick="setLang('de')">DE</button>
+  <button class="lang-btn" onclick="setLang('fr')">FR</button>
+  <button class="lang-btn" onclick="setLang('hi')">HI</button>
+  <button class="lang-btn" onclick="setLang('ja')">JA</button>
+  <button class="lang-btn" onclick="setLang('zh')">ZH</button>
+  <button class="lang-btn" onclick="setLang('ar')">AR</button>
+  <button class="lang-btn" onclick="setLang('pt')">PT</button>
 </div>
 
 <header>
@@ -372,6 +391,13 @@
   <h1>
     <span class="es">Política de Privacidad</span>
     <span class="en">Privacy Policy</span>
+    <span class="de">Datenschutzrichtlinie</span>
+    <span class="fr">Politique de Confidentialité</span>
+    <span class="hi">गोपनीयता नीति</span>
+    <span class="ja">プライバシーポリシー</span>
+    <span class="zh">隐私政策</span>
+    <span class="ar">سياسة الخصوصية</span>
+    <span class="pt">Política de Privacidade</span>
   </h1>
   <p>DupeFire · Daniel Barea</p>
 </header>
@@ -381,11 +407,25 @@
   <div class="update-badge">
     <span class="es">📅 Última actualización: 27 de abril de 2026</span>
     <span class="en">📅 Effective date: 2026-04-27</span>
+    <span class="de">📅 Gültig ab: 27. April 2026</span>
+    <span class="fr">📅 Date d'entrée en vigueur : 27 avril 2026</span>
+    <span class="hi">📅 प्रभावी तिथि: 27 अप्रैल 2026</span>
+    <span class="ja">📅 発効日: 2026年4月27日</span>
+    <span class="zh">📅 生效日期：2026年4月27日</span>
+    <span class="ar">📅 تاريخ السريان: 27 أبريل 2026</span>
+    <span class="pt">📅 Data de vigência: 27 de abril de 2026</span>
   </div>
 
   <div class="intro-card">
     <p class="es">Esta política de privacidad aplica a la app <strong>DupeFire</strong>, creada por <strong>Daniel Barea</strong> como servicio con soporte de anuncios. Nos comprometemos a proteger tu privacidad: todo el procesamiento de archivos se realiza <strong>localmente en tu dispositivo</strong> y no recopilamos datos personales propios.</p>
     <p class="en">This privacy policy applies to the <strong>DupeFire</strong> app, created by <strong>Daniel Barea</strong> as an ad-supported service. We are committed to protecting your privacy: all file processing is done <strong>locally on your device</strong> and we do not collect personal data of our own.</p>
+    <p class="de">Diese Datenschutzrichtlinie gilt für die App <strong>DupeFire</strong>, die von <strong>Daniel Barea</strong> als werbefinanzierter Dienst entwickelt wurde. Wir verpflichten uns, deine Privatsphäre zu schützen: Die gesamte Dateiverarbeitung erfolgt <strong>lokal auf deinem Gerät</strong> und wir erheben keine eigenen personenbezogenen Daten.</p>
+    <p class="fr">Cette politique de confidentialité s'applique à l'application <strong>DupeFire</strong>, créée par <strong>Daniel Barea</strong> en tant que service financé par la publicité. Nous nous engageons à protéger votre vie privée : tout le traitement des fichiers s'effectue <strong>localement sur votre appareil</strong> et nous ne collectons pas de données personnelles.</p>
+    <p class="hi">यह गोपनीयता नीति <strong>DupeFire</strong> ऐप पर लागू होती है, जिसे <strong>Daniel Barea</strong> ने विज्ञापन-समर्थित सेवा के रूप में बनाया है। हम आपकी गोपनीयता की रक्षा करने के लिए प्रतिबद्ध हैं: सभी फ़ाइल प्रोसेसिंग <strong>आपके डिवाइस पर स्थानीय रूप से</strong> होती है और हम कोई व्यक्तिगत डेटा एकत्र नहीं करते।</p>
+    <p class="ja">このプライバシーポリシーは、<strong>Daniel Barea</strong> が広告サポートサービスとして作成した <strong>DupeFire</strong> アプリに適用されます。私たちはあなたのプライバシーを保護することに取り組んでいます：すべてのファイル処理は<strong>あなたのデバイス上でローカルに</strong>行われ、個人データは収集しません。</p>
+    <p class="zh">本隐私政策适用于由 <strong>Daniel Barea</strong> 创建的广告支持服务 <strong>DupeFire</strong> 应用。我们致力于保护您的隐私：所有文件处理均<strong>在您的设备上本地完成</strong>，我们不收集个人数据。</p>
+    <p class="ar">تنطبق سياسة الخصوصية هذه على تطبيق <strong>DupeFire</strong>، الذي أنشأه <strong>Daniel Barea</strong> كخدمة مدعومة بالإعلانات. نحن ملتزمون بحماية خصوصيتك: تتم جميع معالجة الملفات <strong>محليًا على جهازك</strong> ولا نجمع بيانات شخصية.</p>
+    <p class="pt">Esta política de privacidade aplica-se ao aplicativo <strong>DupeFire</strong>, criado por <strong>Daniel Barea</strong> como um serviço com suporte a anúncios. Comprometemo-nos a proteger sua privacidade: todo o processamento de arquivos é feito <strong>localmente no seu dispositivo</strong> e não coletamos dados pessoais.</p>
   </div>
 
   <!-- 1. INFORMATION COLLECTED -->
@@ -395,8 +435,16 @@
       <h2>
         <span class="es">Información recopilada</span>
         <span class="en">Information Collection and Use</span>
+        <span class="de">Informationserhebung und -nutzung</span>
+        <span class="fr">Collecte et utilisation des informations</span>
+        <span class="hi">जानकारी का संग्रह और उपयोग</span>
+        <span class="ja">情報の収集と使用</span>
+        <span class="zh">信息收集与使用</span>
+        <span class="ar">جمع المعلومات واستخدامها</span>
+        <span class="pt">Coleta e uso de informações</span>
       </h2>
     </div>
+
     <div class="es">
       <p>La app puede recopilar automáticamente cierta información técnica al usarla, como:</p>
       <ul>
@@ -419,6 +467,83 @@
       <div class="highlight-box">✅ The Application does <strong>not gather precise location information</strong> and does not use Artificial Intelligence (AI) technologies to process your data.</div>
       <p>All files (photos, videos, documents) are analyzed exclusively on your device. No content is sent to external servers.</p>
     </div>
+    <div class="de">
+      <p>Die App kann beim Benutzen automatisch bestimmte technische Informationen erfassen, wie:</p>
+      <ul>
+        <li>IP-Adresse des Geräts</li>
+        <li>Verwendetes Betriebssystem</li>
+        <li>Nutzungszeit der Anwendung</li>
+        <li>Informationen über Anzeigeninteraktionen (verwaltet von AdMob)</li>
+      </ul>
+      <div class="highlight-box">✅ Die App erfasst <strong>keine genauen Standortinformationen</strong> und verwendet keine KI-Technologien zur Verarbeitung deiner Daten.</div>
+      <p>Alle Dateien (Fotos, Videos, Dokumente) werden ausschließlich auf deinem Gerät analysiert. Kein Inhalt wird an externe Server gesendet.</p>
+    </div>
+    <div class="fr">
+      <p>L'application peut collecter automatiquement certaines informations techniques lors de son utilisation, telles que :</p>
+      <ul>
+        <li>Adresse IP de l'appareil</li>
+        <li>Système d'exploitation utilisé</li>
+        <li>Temps d'utilisation de l'application</li>
+        <li>Données d'interaction avec les publicités (gérées par AdMob)</li>
+      </ul>
+      <div class="highlight-box">✅ L'application <strong>ne collecte pas d'informations précises sur la localisation</strong> et n'utilise pas de technologies d'intelligence artificielle pour traiter vos données.</div>
+      <p>Tous les fichiers (photos, vidéos, documents) sont analysés exclusivement sur votre appareil. Aucun contenu n'est envoyé à des serveurs externes.</p>
+    </div>
+    <div class="hi">
+      <p>ऐप उपयोग के दौरान स्वचालित रूप से कुछ तकनीकी जानकारी एकत्र कर सकती है, जैसे:</p>
+      <ul>
+        <li>डिवाइस का IP पता</li>
+        <li>उपयोग किया गया ऑपरेटिंग सिस्टम</li>
+        <li>ऐप के उपयोग का समय</li>
+        <li>विज्ञापन इंटरैक्शन डेटा (AdMob द्वारा प्रबंधित)</li>
+      </ul>
+      <div class="highlight-box">✅ ऐप <strong>सटीक स्थान जानकारी एकत्र नहीं करती</strong> और न ही आपके डेटा को प्रोसेस करने के लिए AI तकनीक का उपयोग करती है।</div>
+      <p>सभी फ़ाइलें (फ़ोटो, वीडियो, दस्तावेज़) केवल आपके डिवाइस पर विश्लेषण की जाती हैं। कोई भी सामग्री बाहरी सर्वर पर नहीं भेजी जाती।</p>
+    </div>
+    <div class="ja">
+      <p>アプリは使用中に次のような技術情報を自動的に収集する場合があります：</p>
+      <ul>
+        <li>デバイスの IP アドレス</li>
+        <li>使用しているオペレーティングシステム</li>
+        <li>アプリの使用時間</li>
+        <li>広告インタラクション情報（AdMob が管理）</li>
+      </ul>
+      <div class="highlight-box">✅ アプリは<strong>正確な位置情報を収集せず</strong>、データ処理に AI 技術も使用しません。</div>
+      <p>すべてのファイル（写真、動画、ドキュメント）はデバイス上でのみ分析されます。コンテンツが外部サーバーに送信されることはありません。</p>
+    </div>
+    <div class="zh">
+      <p>应用在使用过程中可能自动收集某些技术信息，例如：</p>
+      <ul>
+        <li>设备 IP 地址</li>
+        <li>使用的操作系统</li>
+        <li>应用使用时间</li>
+        <li>广告互动信息（由 AdMob 管理）</li>
+      </ul>
+      <div class="highlight-box">✅ 该应用<strong>不收集精确位置信息</strong>，也不使用人工智能技术处理您的数据。</div>
+      <p>所有文件（照片、视频、文档）仅在您的设备上分析。任何内容都不会发送到外部服务器。</p>
+    </div>
+    <div class="ar">
+      <p>قد يجمع التطبيق تلقائيًا بعض المعلومات التقنية عند استخدامه، مثل:</p>
+      <ul>
+        <li>عنوان IP الخاص بالجهاز</li>
+        <li>نظام التشغيل المستخدم</li>
+        <li>وقت استخدام التطبيق</li>
+        <li>بيانات تفاعل الإعلانات (تديرها AdMob)</li>
+      </ul>
+      <div class="highlight-box">✅ لا يجمع التطبيق <strong>معلومات الموقع الدقيقة</strong> ولا يستخدم تقنيات الذكاء الاصطناعي لمعالجة بياناتك.</div>
+      <p>تُحلَّل جميع الملفات (الصور ومقاطع الفيديو والمستندات) حصريًا على جهازك. لا يُرسَل أي محتوى إلى خوادم خارجية.</p>
+    </div>
+    <div class="pt">
+      <p>O aplicativo pode coletar automaticamente certas informações técnicas durante o uso, como:</p>
+      <ul>
+        <li>Endereço IP do dispositivo</li>
+        <li>Sistema operacional utilizado</li>
+        <li>Tempo de uso do aplicativo</li>
+        <li>Dados de interação com anúncios (gerenciados pelo AdMob)</li>
+      </ul>
+      <div class="highlight-box">✅ O aplicativo <strong>não coleta informações precisas de localização</strong> e não usa tecnologias de Inteligência Artificial para processar seus dados.</div>
+      <p>Todos os arquivos (fotos, vídeos, documentos) são analisados exclusivamente no seu dispositivo. Nenhum conteúdo é enviado para servidores externos.</p>
+    </div>
   </section>
 
   <!-- 2. LOCAL PROCESSING -->
@@ -428,6 +553,13 @@
       <h2>
         <span class="es">Procesamiento local en tu dispositivo</span>
         <span class="en">Local Processing on Your Device</span>
+        <span class="de">Lokale Verarbeitung auf deinem Gerät</span>
+        <span class="fr">Traitement local sur votre appareil</span>
+        <span class="hi">आपके डिवाइस पर स्थानीय प्रोसेसिंग</span>
+        <span class="ja">デバイス上のローカル処理</span>
+        <span class="zh">在您的设备上本地处理</span>
+        <span class="ar">المعالجة المحلية على جهازك</span>
+        <span class="pt">Processamento local no seu dispositivo</span>
       </h2>
     </div>
     <div class="es">
@@ -450,6 +582,76 @@
       </ul>
       <div class="highlight-box">✅ Your files never leave your device. Only you have access to them.</div>
     </div>
+    <div class="de">
+      <p>DupeFire funktioniert vollständig lokal. Alle Vorgänge werden ausschließlich auf deinem Gerät ausgeführt:</p>
+      <ul>
+        <li>Die Erkennung von Duplikaten per Hash erfolgt lokal</li>
+        <li>Die Komprimierung von Bildern und Videos erfolgt lokal</li>
+        <li>Keine Datei, kein Foto, kein Video und kein Dokument wird an externe Server gesendet</li>
+        <li>Wir betreiben keine eigenen Server, die Daten von der App empfangen</li>
+      </ul>
+      <div class="highlight-box">✅ Deine Dateien verlassen niemals dein Gerät. Nur du hast Zugriff darauf.</div>
+    </div>
+    <div class="fr">
+      <p>DupeFire fonctionne entièrement en local. Toutes les opérations sont effectuées exclusivement sur votre appareil :</p>
+      <ul>
+        <li>La détection des doublons par hachage est effectuée localement</li>
+        <li>La compression des images et vidéos est effectuée localement</li>
+        <li>Aucun fichier, photo, vidéo ou document n'est envoyé à des serveurs externes</li>
+        <li>Nous n'exploitons pas de serveurs recevant des données de l'application</li>
+      </ul>
+      <div class="highlight-box">✅ Vos fichiers ne quittent jamais votre appareil. Vous seul y avez accès.</div>
+    </div>
+    <div class="hi">
+      <p>DupeFire पूरी तरह स्थानीय रूप से काम करता है। सभी ऑपरेशन केवल आपके डिवाइस पर किए जाते हैं:</p>
+      <ul>
+        <li>हैश द्वारा डुप्लीकेट पहचान स्थानीय रूप से होती है</li>
+        <li>छवि और वीडियो संपीड़न स्थानीय रूप से होता है</li>
+        <li>कोई भी फ़ाइल, फ़ोटो, वीडियो या दस्तावेज़ बाहरी सर्वर पर नहीं भेजा जाता</li>
+        <li>हमारे पास कोई अपना सर्वर नहीं है जो ऐप से डेटा प्राप्त करे</li>
+      </ul>
+      <div class="highlight-box">✅ आपकी फ़ाइलें कभी भी आपके डिवाइस से बाहर नहीं जातीं। केवल आप ही उन्हें एक्सेस कर सकते हैं।</div>
+    </div>
+    <div class="ja">
+      <p>DupeFire は完全にローカルで動作します。すべての処理はあなたのデバイス上でのみ実行されます：</p>
+      <ul>
+        <li>ハッシュによる重複検出はローカルで行われます</li>
+        <li>画像・動画の圧縮はローカルで行われます</li>
+        <li>ファイル、写真、動画、ドキュメントは外部サーバーに送信されません</li>
+        <li>アプリのデータを受信するサーバーは運営していません</li>
+      </ul>
+      <div class="highlight-box">✅ あなたのファイルはデバイスの外に出ることはありません。アクセスできるのはあなただけです。</div>
+    </div>
+    <div class="zh">
+      <p>DupeFire 完全在本地运行。所有操作仅在您的设备上执行：</p>
+      <ul>
+        <li>通过哈希算法检测重复文件在本地完成</li>
+        <li>图片和视频压缩在本地完成</li>
+        <li>没有任何文件、照片、视频或文档被发送到外部服务器</li>
+        <li>我们没有运营接收应用数据的服务器</li>
+      </ul>
+      <div class="highlight-box">✅ 您的文件永远不会离开您的设备。只有您才能访问它们。</div>
+    </div>
+    <div class="ar">
+      <p>يعمل DupeFire بالكامل محليًا. تُنفَّذ جميع العمليات حصريًا على جهازك:</p>
+      <ul>
+        <li>يتم اكتشاف التكرار عبر التجزئة محليًا</li>
+        <li>يتم ضغط الصور ومقاطع الفيديو محليًا</li>
+        <li>لا يُرسَل أي ملف أو صورة أو مقطع فيديو أو مستند إلى خوادم خارجية</li>
+        <li>لا نشغّل خوادم تستقبل بيانات من التطبيق</li>
+      </ul>
+      <div class="highlight-box">✅ لا تغادر ملفاتك جهازك أبدًا. أنت وحدك من يمكنه الوصول إليها.</div>
+    </div>
+    <div class="pt">
+      <p>DupeFire funciona completamente de forma local. Todas as operações são executadas exclusivamente no seu dispositivo:</p>
+      <ul>
+        <li>A detecção de duplicatas por hash é realizada localmente</li>
+        <li>A compressão de imagens e vídeos é realizada localmente</li>
+        <li>Nenhum arquivo, foto, vídeo ou documento é enviado para servidores externos</li>
+        <li>Não operamos servidores que recebam dados do aplicativo</li>
+      </ul>
+      <div class="highlight-box">✅ Seus arquivos jamais saem do seu dispositivo. Só você tem acesso a eles.</div>
+    </div>
   </section>
 
   <!-- 3. DATA NOT COLLECTED -->
@@ -459,6 +661,13 @@
       <h2>
         <span class="es">Datos que no recopilamos</span>
         <span class="en">Data We Do Not Collect</span>
+        <span class="de">Nicht erhobene Daten</span>
+        <span class="fr">Données que nous ne collectons pas</span>
+        <span class="hi">जो डेटा हम एकत्र नहीं करते</span>
+        <span class="ja">収集しないデータ</span>
+        <span class="zh">我们不收集的数据</span>
+        <span class="ar">البيانات التي لا نجمعها</span>
+        <span class="pt">Dados que não coletamos</span>
       </h2>
     </div>
     <div class="es">
@@ -487,6 +696,97 @@
         <span class="no-data-tag">❌ Biometric data</span>
       </div>
     </div>
+    <div class="de">
+      <p>Wir erheben, speichern oder verarbeiten keine der folgenden Daten:</p>
+      <div class="no-data-list">
+        <span class="no-data-tag">❌ Name oder Identität</span>
+        <span class="no-data-tag">❌ E-Mail-Adresse</span>
+        <span class="no-data-tag">❌ Telefonnummer</span>
+        <span class="no-data-tag">❌ Genauer Standort</span>
+        <span class="no-data-tag">❌ Dateiinhalt</span>
+        <span class="no-data-tag">❌ Benutzerkonten</span>
+        <span class="no-data-tag">❌ Browsing-Verlauf</span>
+        <span class="no-data-tag">❌ Biometrische Daten</span>
+      </div>
+    </div>
+    <div class="fr">
+      <p>Nous ne collectons, ne stockons ni ne traitons aucune des données suivantes :</p>
+      <div class="no-data-list">
+        <span class="no-data-tag">❌ Nom ou identité</span>
+        <span class="no-data-tag">❌ Adresse e-mail</span>
+        <span class="no-data-tag">❌ Numéro de téléphone</span>
+        <span class="no-data-tag">❌ Localisation précise</span>
+        <span class="no-data-tag">❌ Contenu des fichiers</span>
+        <span class="no-data-tag">❌ Comptes utilisateur</span>
+        <span class="no-data-tag">❌ Historique de navigation</span>
+        <span class="no-data-tag">❌ Données biométriques</span>
+      </div>
+    </div>
+    <div class="hi">
+      <p>हम निम्नलिखित में से कोई भी डेटा एकत्र, संग्रहीत या प्रोसेस नहीं करते:</p>
+      <div class="no-data-list">
+        <span class="no-data-tag">❌ नाम या पहचान</span>
+        <span class="no-data-tag">❌ ईमेल पता</span>
+        <span class="no-data-tag">❌ फ़ोन नंबर</span>
+        <span class="no-data-tag">❌ सटीक स्थान</span>
+        <span class="no-data-tag">❌ फ़ाइल सामग्री</span>
+        <span class="no-data-tag">❌ उपयोगकर्ता खाते</span>
+        <span class="no-data-tag">❌ ब्राउज़िंग इतिहास</span>
+        <span class="no-data-tag">❌ बायोमेट्रिक डेटा</span>
+      </div>
+    </div>
+    <div class="ja">
+      <p>以下のデータは一切収集・保存・処理しません：</p>
+      <div class="no-data-list">
+        <span class="no-data-tag">❌ 氏名または身元</span>
+        <span class="no-data-tag">❌ メールアドレス</span>
+        <span class="no-data-tag">❌ 電話番号</span>
+        <span class="no-data-tag">❌ 正確な位置情報</span>
+        <span class="no-data-tag">❌ ファイルの内容</span>
+        <span class="no-data-tag">❌ ユーザーアカウント</span>
+        <span class="no-data-tag">❌ 閲覧履歴</span>
+        <span class="no-data-tag">❌ 生体認証データ</span>
+      </div>
+    </div>
+    <div class="zh">
+      <p>我们不收集、存储或处理以下任何数据：</p>
+      <div class="no-data-list">
+        <span class="no-data-tag">❌ 姓名或身份</span>
+        <span class="no-data-tag">❌ 电子邮件地址</span>
+        <span class="no-data-tag">❌ 电话号码</span>
+        <span class="no-data-tag">❌ 精确位置</span>
+        <span class="no-data-tag">❌ 文件内容</span>
+        <span class="no-data-tag">❌ 用户账户</span>
+        <span class="no-data-tag">❌ 浏览历史</span>
+        <span class="no-data-tag">❌ 生物特征数据</span>
+      </div>
+    </div>
+    <div class="ar">
+      <p>لا نجمع أو نخزن أو نعالج أياً من البيانات التالية:</p>
+      <div class="no-data-list">
+        <span class="no-data-tag">❌ الاسم أو الهوية</span>
+        <span class="no-data-tag">❌ عنوان البريد الإلكتروني</span>
+        <span class="no-data-tag">❌ رقم الهاتف</span>
+        <span class="no-data-tag">❌ الموقع الدقيق</span>
+        <span class="no-data-tag">❌ محتوى الملفات</span>
+        <span class="no-data-tag">❌ حسابات المستخدمين</span>
+        <span class="no-data-tag">❌ سجل التصفح</span>
+        <span class="no-data-tag">❌ البيانات البيومترية</span>
+      </div>
+    </div>
+    <div class="pt">
+      <p>Não coletamos, armazenamos nem processamos nenhum dos seguintes dados:</p>
+      <div class="no-data-list">
+        <span class="no-data-tag">❌ Nome ou identidade</span>
+        <span class="no-data-tag">❌ Endereço de e-mail</span>
+        <span class="no-data-tag">❌ Número de telefone</span>
+        <span class="no-data-tag">❌ Localização precisa</span>
+        <span class="no-data-tag">❌ Conteúdo de arquivos</span>
+        <span class="no-data-tag">❌ Contas de usuário</span>
+        <span class="no-data-tag">❌ Histórico de navegação</span>
+        <span class="no-data-tag">❌ Dados biométricos</span>
+      </div>
+    </div>
   </section>
 
   <!-- 4. PERMISSIONS -->
@@ -496,16 +796,38 @@
       <h2>
         <span class="es">Permisos del dispositivo</span>
         <span class="en">Device Permissions</span>
+        <span class="de">Geräteberechtigungen</span>
+        <span class="fr">Autorisations de l'appareil</span>
+        <span class="hi">डिवाइस अनुमतियां</span>
+        <span class="ja">デバイスの権限</span>
+        <span class="zh">设备权限</span>
+        <span class="ar">أذونات الجهاز</span>
+        <span class="pt">Permissões do dispositivo</span>
       </h2>
     </div>
     <p class="es">La app solicita los siguientes permisos, usados exclusivamente para su funcionalidad principal:</p>
     <p class="en">The app requests the following permissions, used exclusively for its core functionality:</p>
+    <p class="de">Die App fordert folgende Berechtigungen an, die ausschließlich für die Kernfunktion verwendet werden:</p>
+    <p class="fr">L'application demande les autorisations suivantes, utilisées exclusivement pour ses fonctionnalités principales :</p>
+    <p class="hi">ऐप निम्नलिखित अनुमतियां मांगती है, जो केवल इसकी मुख्य कार्यक्षमता के लिए उपयोग की जाती हैं:</p>
+    <p class="ja">アプリは以下の権限を要求します。これらはコア機能のためにのみ使用されます：</p>
+    <p class="zh">应用请求以下权限，仅用于其核心功能：</p>
+    <p class="ar">يطلب التطبيق الأذونات التالية، وتُستخدم حصريًا لوظائفه الأساسية:</p>
+    <p class="pt">O aplicativo solicita as seguintes permissões, usadas exclusivamente para sua funcionalidade principal:</p>
+
     <div class="permission-grid">
       <div class="permission-item">
         <span class="permission-name">READ_MEDIA_IMAGES</span>
         <span class="permission-desc">
           <span class="es">Detectar imágenes duplicadas y comprimirlas</span>
           <span class="en">Detect duplicate images and compress them</span>
+          <span class="de">Doppelte Bilder erkennen und komprimieren</span>
+          <span class="fr">Détecter les images en double et les compresser</span>
+          <span class="hi">डुप्लीकेट छवियां खोजना और उन्हें संपीड़ित करना</span>
+          <span class="ja">重複画像の検出と圧縮</span>
+          <span class="zh">检测重复图片并压缩</span>
+          <span class="ar">اكتشاف الصور المكررة وضغطها</span>
+          <span class="pt">Detectar imagens duplicadas e comprimi-las</span>
         </span>
       </div>
       <div class="permission-item">
@@ -513,6 +835,13 @@
         <span class="permission-desc">
           <span class="es">Detectar vídeos duplicados y comprimirlos</span>
           <span class="en">Detect duplicate videos and compress them</span>
+          <span class="de">Doppelte Videos erkennen und komprimieren</span>
+          <span class="fr">Détecter les vidéos en double et les compresser</span>
+          <span class="hi">डुप्लीकेट वीडियो खोजना और उन्हें संपीड़ित करना</span>
+          <span class="ja">重複動画の検出と圧縮</span>
+          <span class="zh">检测重复视频并压缩</span>
+          <span class="ar">اكتشاف مقاطع الفيديو المكررة وضغطها</span>
+          <span class="pt">Detectar vídeos duplicados e comprimi-los</span>
         </span>
       </div>
       <div class="permission-item">
@@ -520,6 +849,13 @@
         <span class="permission-desc">
           <span class="es">Acceder a documentos y detectar duplicados</span>
           <span class="en">Access documents and detect duplicates</span>
+          <span class="de">Auf Dokumente zugreifen und Duplikate erkennen</span>
+          <span class="fr">Accéder aux documents et détecter les doublons</span>
+          <span class="hi">दस्तावेज़ एक्सेस करना और डुप्लीकेट खोजना</span>
+          <span class="ja">ドキュメントへのアクセスと重複検出</span>
+          <span class="zh">访问文档并检测重复项</span>
+          <span class="ar">الوصول إلى المستندات واكتشاف التكرار</span>
+          <span class="pt">Acessar documentos e detectar duplicatas</span>
         </span>
       </div>
       <div class="permission-item">
@@ -527,12 +863,27 @@
         <span class="permission-desc">
           <span class="es">Eliminar duplicados y guardar archivos comprimidos</span>
           <span class="en">Delete duplicate files and save compressed files</span>
+          <span class="de">Duplikate löschen und komprimierte Dateien speichern</span>
+          <span class="fr">Supprimer les doublons et enregistrer les fichiers compressés</span>
+          <span class="hi">डुप्लीकेट हटाना और संपीड़ित फ़ाइलें सहेजना</span>
+          <span class="ja">重複ファイルの削除と圧縮ファイルの保存</span>
+          <span class="zh">删除重复文件并保存压缩文件</span>
+          <span class="ar">حذف الملفات المكررة وحفظ الملفات المضغوطة</span>
+          <span class="pt">Excluir duplicatas e salvar arquivos comprimidos</span>
         </span>
       </div>
     </div>
+
     <div class="highlight-box">
       <span class="es">Estos permisos no se usan para recopilar información. Solo se accede a los archivos cuando el usuario lo solicita explícitamente.</span>
       <span class="en">These permissions are not used to collect information. Files are only accessed when explicitly requested by the user.</span>
+      <span class="de">Diese Berechtigungen werden nicht zur Datenerhebung verwendet. Auf Dateien wird nur zugegriffen, wenn der Benutzer dies explizit anfordert.</span>
+      <span class="fr">Ces autorisations ne sont pas utilisées pour collecter des informations. Les fichiers ne sont accessibles que sur demande explicite de l'utilisateur.</span>
+      <span class="hi">इन अनुमतियों का उपयोग जानकारी एकत्र करने के लिए नहीं किया जाता। फ़ाइलों को केवल तब एक्सेस किया जाता है जब उपयोगकर्ता स्पष्ट रूप से अनुरोध करे।</span>
+      <span class="ja">これらの権限は情報収集に使用されません。ファイルはユーザーが明示的に要求した場合にのみアクセスされます。</span>
+      <span class="zh">这些权限不用于收集信息。仅在用户明确请求时才会访问文件。</span>
+      <span class="ar">لا تُستخدم هذه الأذونات لجمع المعلومات. لا يتم الوصول إلى الملفات إلا عند طلب المستخدم ذلك صراحةً.</span>
+      <span class="pt">Essas permissões não são usadas para coletar informações. Os arquivos só são acessados quando explicitamente solicitado pelo usuário.</span>
     </div>
   </section>
 
@@ -543,31 +894,59 @@
       <h2>
         <span class="es">Publicidad y servicios de terceros</span>
         <span class="en">Advertising &amp; Third Party Access</span>
+        <span class="de">Werbung und Drittanbieter</span>
+        <span class="fr">Publicité et accès tiers</span>
+        <span class="hi">विज्ञापन और तृतीय पक्ष</span>
+        <span class="ja">広告とサードパーティのアクセス</span>
+        <span class="zh">广告和第三方</span>
+        <span class="ar">الإعلانات والأطراف الثالثة</span>
+        <span class="pt">Publicidade e acesso de terceiros</span>
       </h2>
     </div>
     <div class="es">
-      <p>DupeFire utiliza <strong>Google AdMob</strong> para mostrar anuncios. Solo se comparten datos agregados y anonimizados con servicios externos. El proveedor puede divulgar información cuando lo exija la ley, para proteger derechos o seguridad, o con proveedores de confianza bajo acuerdos de confidencialidad.</p>
-      <p>Los datos que AdMob puede recopilar incluyen:</p>
-      <ul>
-        <li>Identificadores de publicidad del dispositivo (Advertising ID)</li>
-        <li>Información sobre interacciones con anuncios</li>
-        <li>Datos técnicos del dispositivo (modelo, sistema operativo)</li>
-        <li>Dirección IP aproximada</li>
-      </ul>
+      <p>DupeFire utiliza <strong>Google AdMob</strong> para mostrar anuncios. Solo se comparten datos agregados y anonimizados con servicios externos. Los datos que AdMob puede recopilar incluyen: identificadores de publicidad del dispositivo, información sobre interacciones con anuncios, datos técnicos del dispositivo (modelo, sistema operativo) y dirección IP aproximada.</p>
       <div class="warning-box">⚠️ La primera vez que abras la app, se mostrará un formulario de consentimiento requerido por el RGPD europeo para elegir entre anuncios personalizados o no personalizados.</div>
       <p>Consulta la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidad de Google</a>, la política de <a href="https://support.google.com/admob/answer/6128543?hl=es" target="_blank" rel="noopener">AdMob</a> y gestiona tus preferencias en <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
     </div>
     <div class="en">
-      <p>DupeFire uses <strong>Google AdMob</strong> to display advertisements. Only aggregated, anonymized data is shared with external services. The Service Provider may disclose information as required by law, to protect rights or safety, or with trusted service providers under confidentiality agreements.</p>
-      <p>Data that AdMob may collect includes:</p>
-      <ul>
-        <li>Device advertising identifiers (Advertising ID)</li>
-        <li>Ad interaction information</li>
-        <li>Technical device data (model, operating system)</li>
-        <li>Approximate IP address</li>
-      </ul>
+      <p>DupeFire uses <strong>Google AdMob</strong> to display advertisements. Only aggregated, anonymized data is shared with external services. Data that AdMob may collect includes: device advertising identifiers, ad interaction information, technical device data (model, operating system), and approximate IP address.</p>
       <div class="warning-box">⚠️ The first time you open the app, a consent form required by EU GDPR will be shown so you can choose between personalized or non-personalized ads.</div>
       <p>See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>, <a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener">AdMob's policy</a>, and manage your ad preferences at <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+    </div>
+    <div class="de">
+      <p>DupeFire verwendet <strong>Google AdMob</strong> zur Anzeige von Werbung. Es werden nur aggregierte, anonymisierte Daten mit externen Diensten geteilt. AdMob kann folgende Daten erheben: Gerätewerbe-IDs, Informationen über Anzeigeninteraktionen, technische Gerätedaten (Modell, Betriebssystem) und ungefähre IP-Adresse.</p>
+      <div class="warning-box">⚠️ Beim ersten Start der App wird ein Einwilligungsformular gemäß der EU-DSGVO angezeigt, mit dem du zwischen personalisierten und nicht personalisierten Anzeigen wählen kannst.</div>
+      <p>Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google-Datenschutzrichtlinie</a>, <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob-Richtlinie</a>. Anzeigeneinstellungen verwalten: <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+    </div>
+    <div class="fr">
+      <p>DupeFire utilise <strong>Google AdMob</strong> pour afficher des publicités. Seules des données agrégées et anonymisées sont partagées avec des services externes. AdMob peut collecter : identifiants publicitaires de l'appareil, données d'interaction avec les publicités, données techniques de l'appareil (modèle, OS) et adresse IP approximative.</p>
+      <div class="warning-box">⚠️ Lors du premier lancement, un formulaire de consentement requis par le RGPD européen s'affichera pour choisir entre publicités personnalisées ou non.</div>
+      <p>Consultez la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Politique de confidentialité de Google</a>, la politique <a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob</a> et gérez vos préférences sur <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+    </div>
+    <div class="hi">
+      <p>DupeFire विज्ञापन प्रदर्शित करने के लिए <strong>Google AdMob</strong> का उपयोग करता है। केवल एकत्रित और अनामित डेटा बाहरी सेवाओं के साथ साझा किया जाता है। AdMob निम्न डेटा एकत्र कर सकता है: डिवाइस विज्ञापन पहचानकर्ता, विज्ञापन इंटरैक्शन जानकारी, तकनीकी डिवाइस डेटा और अनुमानित IP पता।</p>
+      <div class="warning-box">⚠️ ऐप खोलने पर पहली बार EU GDPR द्वारा आवश्यक सहमति फॉर्म दिखाई देगा जिसमें आप व्यक्तिगत या गैर-व्यक्तिगत विज्ञापन चुन सकते हैं।</div>
+      <p>अधिक जानकारी के लिए: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google की गोपनीयता नीति</a> और <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>।</p>
+    </div>
+    <div class="ja">
+      <p>DupeFire は広告表示に <strong>Google AdMob</strong> を使用しています。外部サービスと共有されるのは集計・匿名化されたデータのみです。AdMob が収集する可能性があるデータ：デバイス広告 ID、広告インタラクション情報、デバイス技術データ（機種、OS）、概算 IP アドレス。</p>
+      <div class="warning-box">⚠️ 初回起動時に、EU GDPR に基づくパーソナライズ広告または非パーソナライズ広告を選択する同意フォームが表示されます。</div>
+      <p>詳細：<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a>、<a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>。</p>
+    </div>
+    <div class="zh">
+      <p>DupeFire 使用 <strong>Google AdMob</strong> 显示广告。仅与外部服务共享汇总的匿名数据。AdMob 可能收集的数据包括：设备广告标识符、广告互动信息、设备技术数据（型号、操作系统）以及大致 IP 地址。</p>
+      <div class="warning-box">⚠️ 首次打开应用时，将显示欧盟 GDPR 要求的同意表单，您可以选择个性化或非个性化广告。</div>
+      <p>详情请参阅 <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google 隐私政策</a>，并在 <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a> 管理您的广告偏好。</p>
+    </div>
+    <div class="ar">
+      <p>يستخدم DupeFire <strong>Google AdMob</strong> لعرض الإعلانات. تُشارَك فقط البيانات المجمّعة وغير المعرِّفة مع الخدمات الخارجية. قد تجمع AdMob: معرّفات الإعلانات للجهاز، ومعلومات تفاعل الإعلانات، والبيانات التقنية للجهاز (الطراز، نظام التشغيل)، وعنوان IP التقريبي.</p>
+      <div class="warning-box">⚠️ عند فتح التطبيق لأول مرة، ستظهر نموذج موافقة مطلوب بموجب GDPR الأوروبي للاختيار بين الإعلانات المخصصة وغير المخصصة.</div>
+      <p>للمزيد: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a> وإدارة تفضيلاتك في <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+    </div>
+    <div class="pt">
+      <p>DupeFire usa o <strong>Google AdMob</strong> para exibir anúncios. Apenas dados agregados e anonimizados são compartilhados com serviços externos. O AdMob pode coletar: identificadores de publicidade do dispositivo, informações de interação com anúncios, dados técnicos do dispositivo (modelo, SO) e endereço IP aproximado.</p>
+      <div class="warning-box">⚠️ Na primeira vez que você abrir o aplicativo, será exibido um formulário de consentimento exigido pelo GDPR europeu para escolher entre anúncios personalizados ou não personalizados.</div>
+      <p>Consulte a <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Política de Privacidade do Google</a> e gerencie suas preferências em <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
     </div>
   </section>
 
@@ -578,10 +957,24 @@
       <h2>
         <span class="es">Derecho de exclusión</span>
         <span class="en">Opt-Out Rights</span>
+        <span class="de">Abmelderechte</span>
+        <span class="fr">Droits de désinscription</span>
+        <span class="hi">ऑप्ट-आउट अधिकार</span>
+        <span class="ja">オプトアウトの権利</span>
+        <span class="zh">退出权利</span>
+        <span class="ar">حقوق الانسحاب</span>
+        <span class="pt">Direitos de exclusão</span>
       </h2>
     </div>
     <p class="es">Puedes detener toda recopilación de información desinstalando la app mediante el proceso estándar de desinstalación de tu dispositivo o a través de la tienda de aplicaciones.</p>
     <p class="en">You can stop all collection of information by uninstalling the Application using the standard uninstall processes available on your mobile device or via the mobile application marketplace.</p>
+    <p class="de">Du kannst die gesamte Datenerhebung stoppen, indem du die App über den normalen Deinstallationsprozess deines Geräts oder über den App-Marktplatz deinstallierst.</p>
+    <p class="fr">Vous pouvez arrêter toute collecte d'informations en désinstallant l'application via le processus de désinstallation standard de votre appareil ou via la boutique d'applications.</p>
+    <p class="hi">आप ऐप को अपने डिवाइस के मानक अनइंस्टॉल प्रक्रिया या ऐप मार्केटप्लेस के माध्यम से अनइंस्टॉल करके सभी जानकारी संग्रह रोक सकते हैं।</p>
+    <p class="ja">アプリを端末の標準的なアンインストール手順またはアプリマーケットプレイスからアンインストールすることで、すべての情報収集を停止できます。</p>
+    <p class="zh">您可以通过使用您设备上的标准卸载程序或通过应用市场卸载该应用来停止所有信息收集。</p>
+    <p class="ar">يمكنك إيقاف جمع المعلومات بالكامل عن طريق إلغاء تثبيت التطبيق باستخدام عملية إلغاء التثبيت القياسية على جهازك أو عبر متجر التطبيقات.</p>
+    <p class="pt">Você pode interromper toda a coleta de informações desinstalando o aplicativo usando os processos padrão de desinstalação disponíveis no seu dispositivo ou via loja de aplicativos.</p>
   </section>
 
   <!-- 7. DATA RETENTION -->
@@ -591,10 +984,24 @@
       <h2>
         <span class="es">Retención de datos</span>
         <span class="en">Data Retention Policy</span>
+        <span class="de">Datenspeicherung</span>
+        <span class="fr">Conservation des données</span>
+        <span class="hi">डेटा प्रतिधारण नीति</span>
+        <span class="ja">データ保持ポリシー</span>
+        <span class="zh">数据保留政策</span>
+        <span class="ar">سياسة الاحتفاظ بالبيانات</span>
+        <span class="pt">Política de retenção de dados</span>
       </h2>
     </div>
     <p class="es">El proveedor del servicio conservará los datos mientras uses la aplicación y durante un tiempo razonable después. Si deseas que se eliminen, contacta en <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> y responderemos en un plazo razonable.</p>
     <p class="en">The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. To request deletion, contact <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> and they will respond in a reasonable time.</p>
+    <p class="de">Der Dienstanbieter speichert die Daten, solange du die App verwendest, und für einen angemessenen Zeitraum danach. Wenn du die Löschung wünschst, kontaktiere <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a>.</p>
+    <p class="fr">Le fournisseur de services conservera les données aussi longtemps que vous utiliserez l'application et pendant un délai raisonnable par la suite. Pour demander la suppression, contactez <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a>.</p>
+    <p class="hi">सेवा प्रदाता डेटा तब तक रखेगा जब तक आप ऐप का उपयोग करते हैं और उसके बाद एक उचित समय के लिए। हटाने का अनुरोध करने के लिए, <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> पर संपर्क करें।</p>
+    <p class="ja">サービスプロバイダーは、アプリを使用している間およびその後の合理的な期間、データを保持します。削除を希望する場合は <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> までお問い合わせください。</p>
+    <p class="zh">服务提供商将在您使用应用期间及之后合理时间内保留数据。如需删除数据，请联系 <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a>。</p>
+    <p class="ar">سيحتفظ مزود الخدمة بالبيانات طالما تستخدم التطبيق ولفترة معقولة بعد ذلك. لطلب الحذف، تواصل عبر <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a>.</p>
+    <p class="pt">O provedor de serviço reterá os dados enquanto você usar o aplicativo e por um período razoável depois. Para solicitar a exclusão, entre em contato em <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a>.</p>
   </section>
 
   <!-- 8. CHILDREN -->
@@ -604,10 +1011,24 @@
       <h2>
         <span class="es">Menores de edad</span>
         <span class="en">Children</span>
+        <span class="de">Kinder</span>
+        <span class="fr">Enfants</span>
+        <span class="hi">बच्चे</span>
+        <span class="ja">お子様について</span>
+        <span class="zh">儿童</span>
+        <span class="ar">الأطفال</span>
+        <span class="pt">Crianças</span>
       </h2>
     </div>
     <p class="es">DupeFire no está dirigida a menores de 13 años. No recopilamos conscientemente información de menores. Si eres padre o tutor y crees que tu hijo ha proporcionado información personal, contáctanos en <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> para eliminarla inmediatamente.</p>
     <p class="en">DupeFire does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and aware that your child has provided personal information, contact us at <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> so we can take the necessary actions.</p>
+    <p class="de">DupeFire richtet sich nicht an Kinder unter 13 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Wenn du Elternteil oder Vormund bist und glaubst, dass dein Kind Daten bereitgestellt hat, kontaktiere uns unter <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a>.</p>
+    <p class="fr">DupeFire ne s'adresse pas aux personnes de moins de 13 ans. Nous ne collectons pas sciemment d'informations personnelles auprès des enfants de moins de 13 ans. Si vous êtes parent ou tuteur, contactez-nous à <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a>.</p>
+    <p class="hi">DupeFire 13 वर्ष से कम उम्र के बच्चों के लिए नहीं है। यदि आप माता-पिता हैं और मानते हैं कि आपके बच्चे ने व्यक्तिगत जानकारी प्रदान की है, तो <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> पर संपर्क करें।</p>
+    <p class="ja">DupeFire は 13 歳未満の方を対象としていません。13 歳未満のお子様の個人情報を意図的に収集しておりません。親権者の方は <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a> までご連絡ください。</p>
+    <p class="zh">DupeFire 不面向 13 岁以下儿童。我们不会故意收集 13 岁以下儿童的个人信息。如果您是家长或监护人，请联系 <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a>。</p>
+    <p class="ar">لا يستهدف DupeFire أي شخص دون سن 13 عامًا. إذا كنت وليًا أو وصيًا وتعتقد أن طفلك قدّم معلومات شخصية، فتواصل معنا على <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a>.</p>
+    <p class="pt">DupeFire não se destina a menores de 13 anos. Se você é pai ou responsável e acredita que seu filho forneceu informações pessoais, entre em contato em <a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a>.</p>
   </section>
 
   <!-- 9. SECURITY -->
@@ -617,10 +1038,24 @@
       <h2>
         <span class="es">Seguridad</span>
         <span class="en">Security</span>
+        <span class="de">Sicherheit</span>
+        <span class="fr">Sécurité</span>
+        <span class="hi">सुरक्षा</span>
+        <span class="ja">セキュリティ</span>
+        <span class="zh">安全性</span>
+        <span class="ar">الأمان</span>
+        <span class="pt">Segurança</span>
       </h2>
     </div>
     <p class="es">El proveedor del servicio aplica salvaguardas físicas, electrónicas y procedimentales para proteger la confidencialidad de tu información.</p>
     <p class="en">The Service Provider provides physical, electronic, and procedural safeguards to protect the confidentiality of your information.</p>
+    <p class="de">Der Dienstanbieter wendet physische, elektronische und verfahrenstechnische Sicherheitsmaßnahmen an, um die Vertraulichkeit deiner Informationen zu schützen.</p>
+    <p class="fr">Le fournisseur de services applique des mesures de protection physiques, électroniques et procédurales pour protéger la confidentialité de vos informations.</p>
+    <p class="hi">सेवा प्रदाता आपकी जानकारी की गोपनीयता की रक्षा के लिए भौतिक, इलेक्ट्रॉनिक और प्रक्रियागत सुरक्षा उपाय लागू करता है।</p>
+    <p class="ja">サービスプロバイダーは、お客様の情報の機密性を保護するために、物理的・電子的・手続き的な保護措置を講じています。</p>
+    <p class="zh">服务提供商采用物理、电子和程序性保障措施来保护您信息的机密性。</p>
+    <p class="ar">يطبّق مزود الخدمة ضمانات مادية وإلكترونية وإجرائية لحماية سرية معلوماتك.</p>
+    <p class="pt">O provedor de serviço aplica salvaguardas físicas, eletrônicas e procedimentais para proteger a confidencialidade das suas informações.</p>
   </section>
 
   <!-- 10. CHANGES -->
@@ -630,10 +1065,24 @@
       <h2>
         <span class="es">Cambios en esta política</span>
         <span class="en">Changes</span>
+        <span class="de">Änderungen</span>
+        <span class="fr">Modifications</span>
+        <span class="hi">बदलाव</span>
+        <span class="ja">変更</span>
+        <span class="zh">变更</span>
+        <span class="ar">التغييرات</span>
+        <span class="pt">Alterações</span>
       </h2>
     </div>
     <p class="es">Esta política puede actualizarse ocasionalmente. Se notificará cualquier cambio actualizando esta página. El uso continuado de la app implica la aceptación de los cambios. Vigente desde el <strong>27 de abril de 2026</strong>.</p>
     <p class="en">This Privacy Policy may be updated from time to time. You will be notified of changes by updating this page. Continued use is deemed approval of all changes. Effective as of <strong>2026-04-27</strong>.</p>
+    <p class="de">Diese Datenschutzrichtlinie kann gelegentlich aktualisiert werden. Änderungen werden durch die Aktualisierung dieser Seite mitgeteilt. Die fortgesetzte Nutzung gilt als Zustimmung. Gültig ab dem <strong>27. April 2026</strong>.</p>
+    <p class="fr">Cette politique peut être mise à jour occasionnellement. Vous serez informé des changements par la mise à jour de cette page. L'utilisation continue implique l'acceptation des modifications. En vigueur depuis le <strong>27 avril 2026</strong>.</p>
+    <p class="hi">यह नीति समय-समय पर अपडेट की जा सकती है। इस पृष्ठ को अपडेट करके परिवर्तनों की सूचना दी जाएगी। ऐप का निरंतर उपयोग परिवर्तनों की स्वीकृति माना जाता है। <strong>27 अप्रैल 2026</strong> से प्रभावी।</p>
+    <p class="ja">このポリシーは随時更新される場合があります。変更はこのページの更新によって通知されます。継続使用は変更への同意とみなされます。<strong>2026年4月27日</strong>より発効。</p>
+    <p class="zh">本政策可能会不时更新。将通过更新此页面通知您任何更改。继续使用即视为接受变更。自 <strong>2026年4月27日</strong> 起生效。</p>
+    <p class="ar">قد تُحدَّث هذه السياسة من حين لآخر. ستُخطَر بأي تغييرات عبر تحديث هذه الصفحة. الاستمرار في الاستخدام يُعدّ موافقةً على التغييرات. سارية منذ <strong>27 أبريل 2026</strong>.</p>
+    <p class="pt">Esta política pode ser atualizada ocasionalmente. As alterações serão notificadas atualizando esta página. O uso contínuo implica a aceitação das alterações. Vigente desde <strong>27 de abril de 2026</strong>.</p>
   </section>
 
   <!-- 11. CONSENT -->
@@ -643,10 +1092,24 @@
       <h2>
         <span class="es">Tu consentimiento</span>
         <span class="en">Your Consent</span>
+        <span class="de">Deine Zustimmung</span>
+        <span class="fr">Votre consentement</span>
+        <span class="hi">आपकी सहमति</span>
+        <span class="ja">あなたの同意</span>
+        <span class="zh">您的同意</span>
+        <span class="ar">موافقتك</span>
+        <span class="pt">Seu consentimento</span>
       </h2>
     </div>
     <p class="es">Al usar la aplicación, consientes el procesamiento de tu información tal como se establece en esta política, tanto ahora como en futuras modificaciones.</p>
     <p class="en">By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+    <p class="de">Durch die Nutzung der Anwendung stimmst du der Verarbeitung deiner Informationen gemäß dieser Datenschutzrichtlinie zu, jetzt und in zukünftigen Änderungen.</p>
+    <p class="fr">En utilisant l'application, vous consentez au traitement de vos informations tel que décrit dans cette politique, maintenant et dans ses futures modifications.</p>
+    <p class="hi">ऐप का उपयोग करके, आप इस नीति में बताए अनुसार अपनी जानकारी के प्रसंस्करण के लिए सहमति देते हैं, अभी और भविष्य के संशोधनों में भी।</p>
+    <p class="ja">アプリを使用することで、本プライバシーポリシーに定める情報処理に、現在および将来の改訂においても同意したことになります。</p>
+    <p class="zh">使用本应用即表示您同意按照本隐私政策（包括其未来修订版本）对您的信息进行处理。</p>
+    <p class="ar">باستخدام التطبيق، توافق على معالجة معلوماتك وفق ما هو محدد في هذه السياسة، الآن وفي أي تعديلات مستقبلية.</p>
+    <p class="pt">Ao usar o aplicativo, você consente com o processamento das suas informações conforme estabelecido nesta política, agora e em futuras modificações.</p>
   </section>
 
   <!-- CONTACT -->
@@ -656,10 +1119,24 @@
       <h2>
         <span class="es">Contacto</span>
         <span class="en">Contact Us</span>
+        <span class="de">Kontakt</span>
+        <span class="fr">Nous contacter</span>
+        <span class="hi">संपर्क करें</span>
+        <span class="ja">お問い合わせ</span>
+        <span class="zh">联系我们</span>
+        <span class="ar">اتصل بنا</span>
+        <span class="pt">Contate-nos</span>
       </h2>
     </div>
     <p class="es">Si tienes cualquier pregunta sobre esta política de privacidad, contacta con el proveedor del servicio:</p>
     <p class="en">If you have any questions regarding privacy while using the Application, please contact the Service Provider:</p>
+    <p class="de">Wenn du Fragen zum Datenschutz hast, wende dich bitte an den Dienstanbieter:</p>
+    <p class="fr">Si vous avez des questions concernant la confidentialité lors de l'utilisation de l'application, veuillez contacter le fournisseur de services :</p>
+    <p class="hi">यदि आपके पास इस गोपनीयता नीति के बारे में कोई प्रश्न हैं, तो सेवा प्रदाता से संपर्क करें:</p>
+    <p class="ja">プライバシーに関するご質問は、サービスプロバイダーまでお問い合わせください：</p>
+    <p class="zh">如果您对隐私政策有任何疑问，请联系服务提供商：</p>
+    <p class="ar">إذا كان لديك أي أسئلة حول سياسة الخصوصية، يرجى التواصل مع مزود الخدمة:</p>
+    <p class="pt">Se tiver alguma dúvida sobre esta política de privacidade, entre em contato com o provedor de serviço:</p>
     <p style="margin-top:0.75rem;"><a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a></p>
   </div>
 
@@ -669,32 +1146,43 @@
   © 2026 DupeFire · Daniel Barea ·
   <span class="es">Todos los derechos reservados</span>
   <span class="en">All rights reserved</span>
+  <span class="de">Alle Rechte vorbehalten</span>
+  <span class="fr">Tous droits réservés</span>
+  <span class="hi">सर्वाधिकार सुरक्षित</span>
+  <span class="ja">無断複写・転載を禁じます</span>
+  <span class="zh">版权所有</span>
+  <span class="ar">جميع الحقوق محفوظة</span>
+  <span class="pt">Todos os direitos reservados</span>
   <br><br>
   <a href="https://app-privacy-policy-generator.nisrulz.com/" target="_blank" rel="noopener">Generated with App Privacy Policy Generator</a>
 </footer>
 
 <script>
   var _meta = {
-    es: {
-      title: 'Política de Privacidad – DupeFire | Privacy Policy',
-      desc: 'Política de privacidad de DupeFire, la app Android para eliminar archivos duplicados. Todo el procesamiento es local en tu dispositivo. No recopilamos datos personales.'
-    },
-    en: {
-      title: 'Privacy Policy – DupeFire | Política de Privacidad',
-      desc: 'Privacy policy of DupeFire, the Android app to remove duplicate files. All processing is local on your device. We do not collect personal data.'
-    }
+    es: { title: 'Política de Privacidad – DupeFire | Privacy Policy', desc: 'Política de privacidad de DupeFire, la app Android para eliminar archivos duplicados. Todo el procesamiento es local en tu dispositivo. No recopilamos datos personales.' },
+    en: { title: 'Privacy Policy – DupeFire | Política de Privacidad', desc: 'Privacy policy of DupeFire, the Android app to remove duplicate files. All processing is local on your device. We do not collect personal data.' },
+    de: { title: 'Datenschutzrichtlinie – DupeFire', desc: 'Datenschutzrichtlinie von DupeFire, der Android-App zum Entfernen doppelter Dateien. Alle Verarbeitung erfolgt lokal auf deinem Gerät. Keine Erhebung personenbezogener Daten.' },
+    fr: { title: 'Politique de Confidentialité – DupeFire', desc: 'Politique de confidentialité de DupeFire, l\'application Android pour supprimer les fichiers en double. Tout le traitement est local sur votre appareil.' },
+    hi: { title: 'गोपनीयता नीति – DupeFire', desc: 'DupeFire की गोपनीयता नीति, Android ऐप जो डुप्लीकेट फ़ाइलें हटाती है। सभी प्रोसेसिंग आपके डिवाइस पर स्थानीय रूप से होती है। कोई व्यक्तिगत डेटा एकत्र नहीं।' },
+    ja: { title: 'プライバシーポリシー – DupeFire', desc: 'DupeFire（Android重複ファイル削除アプリ）のプライバシーポリシー。すべての処理はデバイス上でローカルに行われ、個人データは収集されません。' },
+    zh: { title: '隐私政策 – DupeFire', desc: 'DupeFire（Android重复文件删除应用）的隐私政策。所有处理均在本地完成，不收集个人数据。' },
+    ar: { title: 'سياسة الخصوصية – DupeFire', desc: 'سياسة خصوصية DupeFire، تطبيق Android لحذف الملفات المكررة. جميع المعالجة محلية على جهازك. لا نجمع بيانات شخصية.' },
+    pt: { title: 'Política de Privacidade – DupeFire', desc: 'Política de privacidade do DupeFire, o app Android para remover arquivos duplicados. Todo o processamento é local no seu dispositivo. Não coletamos dados pessoais.' }
   };
 
   function setLang(lang) {
     document.body.className = 'lang-' + lang;
     document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
     document.querySelectorAll('.lang-btn').forEach(function(btn) {
       btn.classList.remove('active');
     });
     document.querySelector('.lang-btn[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
-    document.title = _meta[lang].title;
-    var desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', _meta[lang].desc);
+    if (_meta[lang]) {
+      document.title = _meta[lang].title;
+      var desc = document.querySelector('meta[name="description"]');
+      if (desc) desc.setAttribute('content', _meta[lang].desc);
+    }
   }
 </script>
 

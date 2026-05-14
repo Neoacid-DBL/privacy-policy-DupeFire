@@ -12,6 +12,13 @@
   <link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
   <link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
   <link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <link rel="alternate" hreflang="de" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <link rel="alternate" hreflang="fr" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <link rel="alternate" hreflang="hi" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <link rel="alternate" hreflang="ja" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <link rel="alternate" hreflang="zh" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <link rel="alternate" hreflang="ar" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
   <link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
 
   <!-- Open Graph -->
@@ -21,6 +28,12 @@
   <meta property="og:description" content="Detecta y elimina archivos duplicados en tu Android. Fotos, vídeos y documentos — procesado localmente, sin subir nada a la nube. Descarga gratis."/>
   <meta property="og:locale" content="es_ES"/>
   <meta property="og:locale:alternate" content="en_US"/>
+  <meta property="og:locale:alternate" content="de_DE"/>
+  <meta property="og:locale:alternate" content="fr_FR"/>
+  <meta property="og:locale:alternate" content="ja_JP"/>
+  <meta property="og:locale:alternate" content="zh_CN"/>
+  <meta property="og:locale:alternate" content="ar_SA"/>
+  <meta property="og:locale:alternate" content="pt_BR"/>
   <meta property="og:site_name" content="DupeFire"/>
 
   <!-- Twitter Card -->
@@ -49,7 +62,7 @@
     },
     "url": "https://neoacid-dbl.github.io/DupeFire/app.html",
     "downloadUrl": "https://play.google.com/store/apps/details?id=com.danib.duplicados",
-    "inLanguage": ["es", "en"],
+    "inLanguage": ["es", "en", "de", "fr", "hi", "ja", "zh", "ar", "pt"],
     "isAccessibleForFree": true,
     "featureList": [
       "Detección de fotos duplicadas",
@@ -98,6 +111,7 @@
       justify-content: flex-end;
       padding: 0.5rem 1.5rem;
       gap: 0.4rem;
+      flex-wrap: wrap;
     }
 
     .lang-btn {
@@ -341,13 +355,32 @@
     footer a:hover { border-bottom-color: var(--muted); }
 
     /* ── Language system ── */
-    .es, .en { display: none; }
+    .es, .en, .de, .fr, .hi, .ja, .zh, .ar, .pt { display: none; }
+
     .lang-es .es { display: block; }
     .lang-en .en { display: block; }
-    .lang-es span.es { display: inline; }
-    .lang-en span.en { display: inline; }
-    .lang-es .fi-title.es,
-    .lang-en .fi-title.en { display: block; }
+    .lang-de .de { display: block; }
+    .lang-fr .fr { display: block; }
+    .lang-hi .hi { display: block; }
+    .lang-ja .ja { display: block; }
+    .lang-zh .zh { display: block; }
+    .lang-ar .ar { display: block; }
+    .lang-pt .pt { display: block; }
+
+    .lang-es span.es, .lang-en span.en, .lang-de span.de,
+    .lang-fr span.fr, .lang-hi span.hi, .lang-ja span.ja,
+    .lang-zh span.zh, .lang-ar span.ar, .lang-pt span.pt { display: inline; }
+
+    .lang-es .fi-title.es, .lang-en .fi-title.en, .lang-de .fi-title.de,
+    .lang-fr .fi-title.fr, .lang-hi .fi-title.hi, .lang-ja .fi-title.ja,
+    .lang-zh .fi-title.zh, .lang-ar .fi-title.ar, .lang-pt .fi-title.pt { display: block; }
+
+    /* ── RTL (Arabic) ── */
+    .lang-ar { direction: rtl; }
+    .lang-ar .lang-bar { justify-content: flex-start; }
+    .lang-ar .section-header { flex-direction: row-reverse; }
+    .lang-ar .badges { justify-content: flex-end; }
+    .lang-ar .cta-group { direction: ltr; }
 
     @media (max-width: 600px) {
       section { padding: 1.5rem 1.25rem; }
@@ -360,6 +393,13 @@
 <div class="lang-bar">
   <button class="lang-btn active" onclick="setLang('es')">ES</button>
   <button class="lang-btn" onclick="setLang('en')">EN</button>
+  <button class="lang-btn" onclick="setLang('de')">DE</button>
+  <button class="lang-btn" onclick="setLang('fr')">FR</button>
+  <button class="lang-btn" onclick="setLang('hi')">HI</button>
+  <button class="lang-btn" onclick="setLang('ja')">JA</button>
+  <button class="lang-btn" onclick="setLang('zh')">ZH</button>
+  <button class="lang-btn" onclick="setLang('ar')">AR</button>
+  <button class="lang-btn" onclick="setLang('pt')">PT</button>
 </div>
 
 <!-- HERO -->
@@ -369,6 +409,13 @@
   <p class="hero-tagline">
     <span class="es">Detecta y elimina archivos duplicados en tu Android. Fotos, vídeos y documentos — todo procesado localmente, sin subir nada a la nube.</span>
     <span class="en">Find and remove duplicate files on your Android. Photos, videos and documents — processed entirely on-device, nothing uploaded to the cloud.</span>
+    <span class="de">Findet und entfernt doppelte Dateien auf deinem Android. Fotos, Videos und Dokumente — vollständig lokal verarbeitet, nichts wird in die Cloud hochgeladen.</span>
+    <span class="fr">Trouvez et supprimez les fichiers en double sur votre Android. Photos, vidéos et documents — traités entièrement sur l'appareil, rien n'est envoyé dans le cloud.</span>
+    <span class="hi">अपने Android पर डुप्लीकेट फ़ाइलें खोजें और हटाएं। फ़ोटो, वीडियो और दस्तावेज़ — डिवाइस पर ही प्रोसेस, कुछ भी क्लाउड पर अपलोड नहीं।</span>
+    <span class="ja">Android 上の重複ファイルを見つけて削除。写真、動画、ドキュメント — すべてデバイス上で処理され、クラウドへの送信はありません。</span>
+    <span class="zh">在您的 Android 设备上查找并删除重复文件。照片、视频和文档——完全在设备上处理，不上传任何内容到云端。</span>
+    <span class="ar">اعثر على الملفات المكررة واحذفها من جهاز Android. الصور ومقاطع الفيديو والمستندات — تُعالج محليًا، لا يُرفع شيء إلى السحابة.</span>
+    <span class="pt">Encontre e remova arquivos duplicados no seu Android. Fotos, vídeos e documentos — processados inteiramente no dispositivo, nada enviado para a nuvem.</span>
   </p>
   <div class="cta-group">
     <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener">
@@ -377,6 +424,13 @@
       </svg>
       <span class="es">Descargar en Google Play</span>
       <span class="en">Get it on Google Play</span>
+      <span class="de">Laden bei Google Play</span>
+      <span class="fr">Télécharger sur Google Play</span>
+      <span class="hi">Google Play पर पाएं</span>
+      <span class="ja">Google Play で入手</span>
+      <span class="zh">从 Google Play 下载</span>
+      <span class="ar">تنزيل من Google Play</span>
+      <span class="pt">Baixar no Google Play</span>
     </a>
   </div>
 </div>
@@ -386,9 +440,9 @@
 
   <div class="badges">
     <span class="badge">📱 Android</span>
-    <span class="badge">🆓 <span class="es">Gratis</span><span class="en">Free</span></span>
-    <span class="badge">🔒 <span class="es">Privacidad local</span><span class="en">Local privacy</span></span>
-    <span class="badge">🌍 ES / EN</span>
+    <span class="badge">🆓 <span class="es">Gratis</span><span class="en">Free</span><span class="de">Kostenlos</span><span class="fr">Gratuit</span><span class="hi">मुफ़्त</span><span class="ja">無料</span><span class="zh">免费</span><span class="ar">مجاني</span><span class="pt">Grátis</span></span>
+    <span class="badge">🔒 <span class="es">Privacidad local</span><span class="en">Local privacy</span><span class="de">Lokaler Datenschutz</span><span class="fr">Confidentialité locale</span><span class="hi">स्थानीय गोपनीयता</span><span class="ja">ローカルプライバシー</span><span class="zh">本地隐私</span><span class="ar">خصوصية محلية</span><span class="pt">Privacidade local</span></span>
+    <span class="badge">🌍 ES / EN / DE / FR / HI / JA / ZH / AR / PT</span>
   </div>
 
   <!-- WHAT IS DUPEFIRE -->
@@ -398,10 +452,24 @@
       <h2>
         <span class="es">¿Qué es DupeFire?</span>
         <span class="en">What is DupeFire?</span>
+        <span class="de">Was ist DupeFire?</span>
+        <span class="fr">Qu'est-ce que DupeFire ?</span>
+        <span class="hi">DupeFire क्या है?</span>
+        <span class="ja">DupeFire とは？</span>
+        <span class="zh">DupeFire 是什么？</span>
+        <span class="ar">ما هو DupeFire؟</span>
+        <span class="pt">O que é o DupeFire?</span>
       </h2>
     </div>
     <p class="es">DupeFire es una app para Android que analiza tu almacenamiento y encuentra archivos duplicados — fotos, vídeos y documentos — para que puedas eliminarlos de forma segura y liberar espacio. Todo el análisis se realiza en tu propio dispositivo; ningún archivo sale de tu teléfono.</p>
     <p class="en">DupeFire is an Android app that scans your storage and finds duplicate files — photos, videos and documents — so you can safely delete them and reclaim space. All analysis happens on your own device; no file ever leaves your phone.</p>
+    <p class="de">DupeFire ist eine Android-App, die deinen Speicher scannt und doppelte Dateien — Fotos, Videos und Dokumente — findet, damit du sie sicher löschen und Speicherplatz freigeben kannst. Die gesamte Analyse findet auf deinem Gerät statt; keine Datei verlässt jemals dein Telefon.</p>
+    <p class="fr">DupeFire est une application Android qui analyse votre stockage et trouve les fichiers en double — photos, vidéos et documents — pour que vous puissiez les supprimer en toute sécurité et libérer de l'espace. Toute l'analyse s'effectue sur votre appareil ; aucun fichier ne quitte jamais votre téléphone.</p>
+    <p class="hi">DupeFire एक Android ऐप है जो आपके स्टोरेज को स्कैन करके डुप्लीकेट फ़ाइलें — फ़ोटो, वीडियो और दस्तावेज़ — ढूंढती है, ताकि आप उन्हें सुरक्षित रूप से हटा सकें और जगह खाली कर सकें। सभी विश्लेषण आपके अपने डिवाइस पर होते हैं; कोई भी फ़ाइल आपके फ़ोन से बाहर नहीं जाती।</p>
+    <p class="ja">DupeFire は Android アプリで、ストレージをスキャンして重複ファイル（写真、動画、ドキュメント）を見つけ、安全に削除してスペースを確保できます。すべての解析はあなたのデバイス上で行われ、ファイルがスマートフォンの外に出ることはありません。</p>
+    <p class="zh">DupeFire 是一款 Android 应用，可扫描您的存储空间并找到重复文件——照片、视频和文档——让您安全删除它们并释放空间。所有分析都在您自己的设备上进行，没有任何文件会离开您的手机。</p>
+    <p class="ar">DupeFire تطبيق Android يفحص مساحة التخزين ويجد الملفات المكررة — الصور ومقاطع الفيديو والمستندات — لتتمكن من حذفها بأمان وتحرير المساحة. يتم إجراء كل التحليل على جهازك الخاص؛ لا تغادر أي ملف هاتفك قط.</p>
+    <p class="pt">DupeFire é um aplicativo Android que analisa seu armazenamento e encontra arquivos duplicados — fotos, vídeos e documentos — para que você possa excluí-los com segurança e liberar espaço. Toda a análise acontece no seu próprio dispositivo; nenhum arquivo jamais sai do seu telefone.</p>
   </section>
 
   <!-- FEATURES -->
@@ -411,6 +479,13 @@
       <h2>
         <span class="es">Características principales</span>
         <span class="en">Key features</span>
+        <span class="de">Hauptfunktionen</span>
+        <span class="fr">Fonctionnalités principales</span>
+        <span class="hi">मुख्य विशेषताएं</span>
+        <span class="ja">主な機能</span>
+        <span class="zh">主要功能</span>
+        <span class="ar">الميزات الرئيسية</span>
+        <span class="pt">Principais recursos</span>
       </h2>
     </div>
     <div class="feature-grid">
@@ -419,48 +494,132 @@
         <div class="fi-icon">📸</div>
         <div class="fi-title es">Detección de fotos duplicadas</div>
         <div class="fi-title en">Duplicate photo detection</div>
+        <div class="fi-title de">Erkennung doppelter Fotos</div>
+        <div class="fi-title fr">Détection de photos en double</div>
+        <div class="fi-title hi">डुप्लीकेट फ़ोटो पहचान</div>
+        <div class="fi-title ja">重複写真の検出</div>
+        <div class="fi-title zh">检测重复照片</div>
+        <div class="fi-title ar">اكتشاف الصور المكررة</div>
+        <div class="fi-title pt">Detecção de fotos duplicadas</div>
         <p class="fi-desc es">Compara imágenes por hash para encontrar copias exactas.</p>
         <p class="fi-desc en">Compares images by hash to find exact copies.</p>
+        <p class="fi-desc de">Vergleicht Bilder per Hash, um exakte Kopien zu finden.</p>
+        <p class="fi-desc fr">Compare les images par hachage pour trouver les copies exactes.</p>
+        <p class="fi-desc hi">सटीक प्रतियां खोजने के लिए हैश द्वारा छवियों की तुलना करता है।</p>
+        <p class="fi-desc ja">ハッシュで画像を比較して完全な複製を検出します。</p>
+        <p class="fi-desc zh">通过哈希比较图片以查找完全相同的副本。</p>
+        <p class="fi-desc ar">تقارن الصور بالتجزئة للعثور على النسخ المطابقة.</p>
+        <p class="fi-desc pt">Compara imagens por hash para encontrar cópias exatas.</p>
       </div>
 
       <div class="feature-item">
         <div class="fi-icon">🎬</div>
         <div class="fi-title es">Detección de vídeos duplicados</div>
         <div class="fi-title en">Duplicate video detection</div>
+        <div class="fi-title de">Erkennung doppelter Videos</div>
+        <div class="fi-title fr">Détection de vidéos en double</div>
+        <div class="fi-title hi">डुप्लीकेट वीडियो पहचान</div>
+        <div class="fi-title ja">重複動画の検出</div>
+        <div class="fi-title zh">检测重复视频</div>
+        <div class="fi-title ar">اكتشاف مقاطع الفيديو المكررة</div>
+        <div class="fi-title pt">Detecção de vídeos duplicados</div>
         <p class="fi-desc es">Localiza vídeos repetidos que ocupan espacio innecesario.</p>
         <p class="fi-desc en">Locates repeated videos taking up unnecessary space.</p>
+        <p class="fi-desc de">Findet wiederholte Videos, die unnötig Speicherplatz belegen.</p>
+        <p class="fi-desc fr">Localise les vidéos répétées qui prennent de l'espace inutilement.</p>
+        <p class="fi-desc hi">अनावश्यक जगह लेने वाले दोहराए गए वीडियो ढूंढता है।</p>
+        <p class="fi-desc ja">不要なスペースを占める重複動画を検出します。</p>
+        <p class="fi-desc zh">找到占用不必要空间的重复视频。</p>
+        <p class="fi-desc ar">يحدد مقاطع الفيديو المكررة التي تشغل مساحة غير ضرورية.</p>
+        <p class="fi-desc pt">Localiza vídeos repetidos que ocupam espaço desnecessário.</p>
       </div>
 
       <div class="feature-item">
         <div class="fi-icon">📄</div>
         <div class="fi-title es">Documentos duplicados</div>
         <div class="fi-title en">Duplicate documents</div>
+        <div class="fi-title de">Doppelte Dokumente</div>
+        <div class="fi-title fr">Documents en double</div>
+        <div class="fi-title hi">डुप्लीकेट दस्तावेज़</div>
+        <div class="fi-title ja">重複ドキュメント</div>
+        <div class="fi-title zh">重复文档</div>
+        <div class="fi-title ar">المستندات المكررة</div>
+        <div class="fi-title pt">Documentos duplicados</div>
         <p class="fi-desc es">Detecta PDFs, Word, APKs y más archivos repetidos.</p>
         <p class="fi-desc en">Detects duplicated PDFs, Word files, APKs and more.</p>
+        <p class="fi-desc de">Erkennt doppelte PDFs, Word-Dateien, APKs und mehr.</p>
+        <p class="fi-desc fr">Détecte les PDF, fichiers Word, APK et autres fichiers en double.</p>
+        <p class="fi-desc hi">डुप्लीकेट PDF, Word फ़ाइलें, APK और अधिक फ़ाइलें खोजता है।</p>
+        <p class="fi-desc ja">重複した PDF、Word ファイル、APK などを検出します。</p>
+        <p class="fi-desc zh">检测重复的 PDF、Word 文件、APK 等文件。</p>
+        <p class="fi-desc ar">يكتشف ملفات PDF وWord وAPK المكررة وغيرها.</p>
+        <p class="fi-desc pt">Detecta PDFs, arquivos Word, APKs e outros arquivos duplicados.</p>
       </div>
 
       <div class="feature-item">
         <div class="fi-icon">🗜️</div>
         <div class="fi-title es">Compresión de imágenes y vídeos</div>
         <div class="fi-title en">Image &amp; video compression</div>
+        <div class="fi-title de">Bild- und Videokomprimierung</div>
+        <div class="fi-title fr">Compression d'images et de vidéos</div>
+        <div class="fi-title hi">छवि और वीडियो संपीड़न</div>
+        <div class="fi-title ja">画像・動画の圧縮</div>
+        <div class="fi-title zh">图片和视频压缩</div>
+        <div class="fi-title ar">ضغط الصور ومقاطع الفيديو</div>
+        <div class="fi-title pt">Compressão de imagens e vídeos</div>
         <p class="fi-desc es">Reduce el tamaño de tus archivos sin necesidad de internet.</p>
         <p class="fi-desc en">Reduce file size without needing an internet connection.</p>
+        <p class="fi-desc de">Reduziert die Dateigröße ohne Internetverbindung.</p>
+        <p class="fi-desc fr">Réduit la taille des fichiers sans connexion internet.</p>
+        <p class="fi-desc hi">इंटरनेट कनेक्शन की जरूरत के बिना फ़ाइल का आकार कम करता है।</p>
+        <p class="fi-desc ja">インターネット接続なしでファイルサイズを縮小します。</p>
+        <p class="fi-desc zh">无需网络连接即可压缩文件大小。</p>
+        <p class="fi-desc ar">يقلل حجم الملفات دون الحاجة إلى اتصال بالإنترنت.</p>
+        <p class="fi-desc pt">Reduz o tamanho dos arquivos sem precisar de internet.</p>
       </div>
 
       <div class="feature-item">
         <div class="fi-icon">🔒</div>
         <div class="fi-title es">100 % local y privado</div>
         <div class="fi-title en">100 % local &amp; private</div>
+        <div class="fi-title de">100 % lokal und privat</div>
+        <div class="fi-title fr">100 % local et privé</div>
+        <div class="fi-title hi">100% स्थानीय और निजी</div>
+        <div class="fi-title ja">100% ローカル＆プライベート</div>
+        <div class="fi-title zh">100% 本地且私密</div>
+        <div class="fi-title ar">100٪ محلي وخاص</div>
+        <div class="fi-title pt">100% local e privado</div>
         <p class="fi-desc es">Ningún archivo se sube a servidores externos. Todo queda en tu dispositivo.</p>
         <p class="fi-desc en">No file is uploaded to external servers. Everything stays on your device.</p>
+        <p class="fi-desc de">Keine Datei wird auf externe Server hochgeladen. Alles bleibt auf deinem Gerät.</p>
+        <p class="fi-desc fr">Aucun fichier n'est téléchargé sur des serveurs externes. Tout reste sur votre appareil.</p>
+        <p class="fi-desc hi">कोई भी फ़ाइल बाहरी सर्वर पर अपलोड नहीं होती। सब कुछ आपके डिवाइस पर रहता है।</p>
+        <p class="fi-desc ja">ファイルは外部サーバーにアップロードされません。すべてデバイス上に留まります。</p>
+        <p class="fi-desc zh">任何文件都不会上传到外部服务器。一切都保留在您的设备上。</p>
+        <p class="fi-desc ar">لا يُرفع أي ملف إلى خوادم خارجية. كل شيء يبقى على جهازك.</p>
+        <p class="fi-desc pt">Nenhum arquivo é enviado para servidores externos. Tudo fica no seu dispositivo.</p>
       </div>
 
       <div class="feature-item">
         <div class="fi-icon">⚡</div>
         <div class="fi-title es">Rápido y eficiente</div>
         <div class="fi-title en">Fast &amp; efficient</div>
+        <div class="fi-title de">Schnell und effizient</div>
+        <div class="fi-title fr">Rapide et efficace</div>
+        <div class="fi-title hi">तेज़ और कुशल</div>
+        <div class="fi-title ja">高速＆効率的</div>
+        <div class="fi-title zh">快速高效</div>
+        <div class="fi-title ar">سريع وفعّال</div>
+        <div class="fi-title pt">Rápido e eficiente</div>
         <p class="fi-desc es">Algoritmo de hash optimizado para analizar grandes colecciones de archivos.</p>
         <p class="fi-desc en">Optimized hash algorithm to scan large file collections quickly.</p>
+        <p class="fi-desc de">Optimierter Hash-Algorithmus für die schnelle Analyse großer Dateisammlungen.</p>
+        <p class="fi-desc fr">Algorithme de hachage optimisé pour analyser rapidement de grandes collections de fichiers.</p>
+        <p class="fi-desc hi">बड़े फ़ाइल संग्रहों को तेज़ी से स्कैन करने के लिए अनुकूलित हैश एल्गोरिदम।</p>
+        <p class="fi-desc ja">大規模なファイルコレクションを素早くスキャンするための最適化されたハッシュアルゴリズム。</p>
+        <p class="fi-desc zh">优化的哈希算法，可快速扫描大型文件集合。</p>
+        <p class="fi-desc ar">خوارزمية تجزئة محسّنة لفحص مجموعات الملفات الكبيرة بسرعة.</p>
+        <p class="fi-desc pt">Algoritmo de hash otimizado para analisar grandes coleções de arquivos rapidamente.</p>
       </div>
 
     </div>
@@ -473,21 +632,43 @@
       <h2>
         <span class="es">Tu privacidad, nuestra prioridad</span>
         <span class="en">Your privacy, our priority</span>
+        <span class="de">Deine Privatsphäre, unsere Priorität</span>
+        <span class="fr">Votre confidentialité, notre priorité</span>
+        <span class="hi">आपकी गोपनीयता, हमारी प्राथमिकता</span>
+        <span class="ja">あなたのプライバシー、私たちの優先事項</span>
+        <span class="zh">您的隐私，我们的优先事项</span>
+        <span class="ar">خصوصيتك، أولويتنا</span>
+        <span class="pt">Sua privacidade, nossa prioridade</span>
       </h2>
     </div>
     <p class="es">DupeFire no recopila contenido de tus archivos ni los envía a ningún servidor. Todo el procesamiento ocurre localmente en tu dispositivo.</p>
     <p class="en">DupeFire does not collect your file contents or send them to any server. All processing happens locally on your device.</p>
+    <p class="de">DupeFire erfasst keine Dateiinhalte und sendet sie auch nicht an Server. Die gesamte Verarbeitung erfolgt lokal auf deinem Gerät.</p>
+    <p class="fr">DupeFire ne collecte pas le contenu de vos fichiers et ne les envoie à aucun serveur. Tout le traitement s'effectue localement sur votre appareil.</p>
+    <p class="hi">DupeFire आपकी फ़ाइलों की सामग्री एकत्र नहीं करता और न किसी सर्वर पर भेजता है। सभी प्रोसेसिंग आपके डिवाइस पर स्थानीय रूप से होती है।</p>
+    <p class="ja">DupeFire はファイルの内容を収集したり、サーバーに送信したりしません。すべての処理はデバイス上でローカルに行われます。</p>
+    <p class="zh">DupeFire 不会收集您的文件内容，也不会将其发送到任何服务器。所有处理都在您的设备上本地进行。</p>
+    <p class="ar">لا يجمع DupeFire محتوى ملفاتك ولا يرسله إلى أي خادم. تتم جميع المعالجة محليًا على جهازك.</p>
+    <p class="pt">O DupeFire não coleta o conteúdo dos seus arquivos nem os envia para nenhum servidor. Todo o processamento ocorre localmente no seu dispositivo.</p>
+
     <div class="tag-list">
-      <span class="tag-green">✅ <span class="es">Sin cuenta de usuario</span><span class="en">No user account</span></span>
-      <span class="tag-green">✅ <span class="es">Sin registro</span><span class="en">No registration</span></span>
-      <span class="tag-green">✅ <span class="es">Sin subida de archivos</span><span class="en">No file uploads</span></span>
-      <span class="tag-green">✅ <span class="es">Sin tracking de ubicación</span><span class="en">No location tracking</span></span>
-      <span class="tag-green">✅ <span class="es">Análisis 100 % offline</span><span class="en">100 % offline analysis</span></span>
+      <span class="tag-green">✅ <span class="es">Sin cuenta de usuario</span><span class="en">No user account</span><span class="de">Kein Benutzerkonto</span><span class="fr">Sans compte utilisateur</span><span class="hi">कोई खाता नहीं</span><span class="ja">アカウント不要</span><span class="zh">无需账户</span><span class="ar">بدون حساب</span><span class="pt">Sem conta</span></span>
+      <span class="tag-green">✅ <span class="es">Sin registro</span><span class="en">No registration</span><span class="de">Keine Registrierung</span><span class="fr">Sans inscription</span><span class="hi">कोई पंजीकरण नहीं</span><span class="ja">登録不要</span><span class="zh">无需注册</span><span class="ar">بدون تسجيل</span><span class="pt">Sem registro</span></span>
+      <span class="tag-green">✅ <span class="es">Sin subida de archivos</span><span class="en">No file uploads</span><span class="de">Kein Datei-Upload</span><span class="fr">Sans téléchargement</span><span class="hi">कोई अपलोड नहीं</span><span class="ja">アップロードなし</span><span class="zh">无文件上传</span><span class="ar">بدون رفع ملفات</span><span class="pt">Sem uploads</span></span>
+      <span class="tag-green">✅ <span class="es">Sin tracking de ubicación</span><span class="en">No location tracking</span><span class="de">Keine Standortverfolgung</span><span class="fr">Sans suivi de localisation</span><span class="hi">कोई स्थान ट्रैकिंग नहीं</span><span class="ja">位置追跡なし</span><span class="zh">无位置追踪</span><span class="ar">بدون تتبع الموقع</span><span class="pt">Sem rastreamento</span></span>
+      <span class="tag-green">✅ <span class="es">Análisis 100 % offline</span><span class="en">100 % offline analysis</span><span class="de">100 % Offline-Analyse</span><span class="fr">Analyse 100 % hors ligne</span><span class="hi">100% ऑफ़लाइन</span><span class="ja">100% オフライン解析</span><span class="zh">100% 离线</span><span class="ar">100٪ بدون إنترنت</span><span class="pt">100% offline</span></span>
     </div>
     <p style="margin-top:1rem;">
       <a href="index.html">
         <span class="es">→ Leer la política de privacidad completa</span>
         <span class="en">→ Read the full privacy policy</span>
+        <span class="de">→ Vollständige Datenschutzrichtlinie lesen</span>
+        <span class="fr">→ Lire la politique de confidentialité complète</span>
+        <span class="hi">→ पूरी गोपनीयता नीति पढ़ें</span>
+        <span class="ja">→ プライバシーポリシー全文を読む</span>
+        <span class="zh">→ 阅读完整隐私政策</span>
+        <span class="ar">→ قراءة سياسة الخصوصية الكاملة</span>
+        <span class="pt">→ Ler a política de privacidade completa</span>
       </a>
     </p>
   </section>
@@ -498,9 +679,23 @@
     <h2 style="margin-bottom:0.6rem;">
       <span class="es">Descarga DupeFire gratis</span>
       <span class="en">Download DupeFire for free</span>
+      <span class="de">DupeFire kostenlos herunterladen</span>
+      <span class="fr">Télécharger DupeFire gratuitement</span>
+      <span class="hi">DupeFire मुफ़्त में डाउनलोड करें</span>
+      <span class="ja">DupeFire を無料でダウンロード</span>
+      <span class="zh">免费下载 DupeFire</span>
+      <span class="ar">تنزيل DupeFire مجانًا</span>
+      <span class="pt">Baixar DupeFire gratuitamente</span>
     </h2>
     <p class="es">Disponible en Google Play para dispositivos Android.</p>
     <p class="en">Available on Google Play for Android devices.</p>
+    <p class="de">Verfügbar bei Google Play für Android-Geräte.</p>
+    <p class="fr">Disponible sur Google Play pour les appareils Android.</p>
+    <p class="hi">Android डिवाइस के लिए Google Play पर उपलब्ध है।</p>
+    <p class="ja">Android デバイス向けに Google Play で提供中。</p>
+    <p class="zh">适用于 Android 设备，可在 Google Play 上获取。</p>
+    <p class="ar">متاح على Google Play لأجهزة Android.</p>
+    <p class="pt">Disponível no Google Play para dispositivos Android.</p>
     <div style="margin-top:1.25rem;">
       <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.danib.duplicados" target="_blank" rel="noopener" style="display:inline-flex;">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -508,6 +703,13 @@
         </svg>
         <span class="es">Descargar en Google Play</span>
         <span class="en">Get it on Google Play</span>
+        <span class="de">Laden bei Google Play</span>
+        <span class="fr">Télécharger sur Google Play</span>
+        <span class="hi">Google Play पर पाएं</span>
+        <span class="ja">Google Play で入手</span>
+        <span class="zh">从 Google Play 下载</span>
+        <span class="ar">تنزيل من Google Play</span>
+        <span class="pt">Baixar no Google Play</span>
       </a>
     </div>
   </section>
@@ -519,10 +721,24 @@
       <h2>
         <span class="es">Contacto</span>
         <span class="en">Contact</span>
+        <span class="de">Kontakt</span>
+        <span class="fr">Contact</span>
+        <span class="hi">संपर्क</span>
+        <span class="ja">お問い合わせ</span>
+        <span class="zh">联系我们</span>
+        <span class="ar">اتصل بنا</span>
+        <span class="pt">Contato</span>
       </h2>
     </div>
     <p class="es">¿Tienes preguntas, sugerencias o has encontrado un error? Escríbenos.</p>
     <p class="en">Have questions, suggestions or found a bug? Drop us a line.</p>
+    <p class="de">Hast du Fragen, Anregungen oder einen Fehler gefunden? Schreib uns.</p>
+    <p class="fr">Des questions, des suggestions ou un bug ? Écrivez-nous.</p>
+    <p class="hi">क्या आपके कोई सवाल, सुझाव हैं या कोई बग मिला? हमें लिखें।</p>
+    <p class="ja">ご質問、ご提案、またはバグを見つけましたか？ご連絡ください。</p>
+    <p class="zh">有问题、建议或发现了错误？请联系我们。</p>
+    <p class="ar">هل لديك أسئلة أو اقتراحات أو وجدت خطأ؟ راسلنا.</p>
+    <p class="pt">Tem perguntas, sugestões ou encontrou um bug? Escreva para nós.</p>
     <p style="margin-top:0.75rem;"><a href="mailto:danibarea@gmail.com">danibarea@gmail.com</a></p>
   </div>
 
@@ -532,35 +748,53 @@
   © 2026 DupeFire · Daniel Barea ·
   <span class="es">Todos los derechos reservados</span>
   <span class="en">All rights reserved</span>
+  <span class="de">Alle Rechte vorbehalten</span>
+  <span class="fr">Tous droits réservés</span>
+  <span class="hi">सर्वाधिकार सुरक्षित</span>
+  <span class="ja">無断複写・転載を禁じます</span>
+  <span class="zh">版权所有</span>
+  <span class="ar">جميع الحقوق محفوظة</span>
+  <span class="pt">Todos os direitos reservados</span>
   <br><br>
   <a href="index.html">
     <span class="es">Política de privacidad</span>
     <span class="en">Privacy policy</span>
+    <span class="de">Datenschutzrichtlinie</span>
+    <span class="fr">Politique de confidentialité</span>
+    <span class="hi">गोपनीयता नीति</span>
+    <span class="ja">プライバシーポリシー</span>
+    <span class="zh">隐私政策</span>
+    <span class="ar">سياسة الخصوصية</span>
+    <span class="pt">Política de privacidade</span>
   </a>
 </footer>
 
 <script>
   var _meta = {
-    es: {
-      title: 'DupeFire – Elimina Archivos Duplicados en Android | Gratis',
-      desc: 'DupeFire detecta y elimina archivos duplicados en tu Android: fotos, vídeos y documentos. Todo el procesamiento es local y privado. Descarga gratis en Google Play.'
-    },
-    en: {
-      title: 'DupeFire – Remove Duplicate Files on Android | Free',
-      desc: 'DupeFire finds and removes duplicate files on your Android: photos, videos and documents. All processing is local and private. Download free on Google Play.'
-    }
+    es: { title: 'DupeFire – Elimina Archivos Duplicados en Android | Gratis', desc: 'DupeFire detecta y elimina archivos duplicados en tu Android: fotos, vídeos y documentos. Todo el procesamiento es local y privado. Descarga gratis en Google Play.' },
+    en: { title: 'DupeFire – Remove Duplicate Files on Android | Free', desc: 'DupeFire finds and removes duplicate files on your Android: photos, videos and documents. All processing is local and private. Download free on Google Play.' },
+    de: { title: 'DupeFire – Doppelte Dateien auf Android entfernen | Kostenlos', desc: 'DupeFire findet und entfernt doppelte Dateien auf deinem Android: Fotos, Videos und Dokumente. Verarbeitung vollständig lokal und privat. Kostenlos bei Google Play.' },
+    fr: { title: 'DupeFire – Supprimer les doublons sur Android | Gratuit', desc: 'DupeFire trouve et supprime les fichiers en double sur votre Android : photos, vidéos et documents. Traitement entièrement local et privé. Téléchargement gratuit sur Google Play.' },
+    hi: { title: 'DupeFire – Android पर डुप्लीकेट फ़ाइलें हटाएं | मुफ़्त', desc: 'DupeFire आपके Android पर डुप्लीकेट फ़ाइलें ढूंढता और हटाता है: फ़ोटो, वीडियो और दस्तावेज़। सभी प्रोसेसिंग स्थानीय। Google Play पर मुफ़्त डाउनलोड।' },
+    ja: { title: 'DupeFire – Androidの重複ファイルを削除 | 無料', desc: 'DupeFire はAndroid上の重複ファイル（写真、動画、ドキュメント）を検出・削除します。処理はすべてローカルで安全に実行。Google Playで無料ダウンロード。' },
+    zh: { title: 'DupeFire – 删除Android重复文件 | 免费', desc: 'DupeFire 检测并删除您Android上的重复文件：照片、视频和文档。所有处理均在本地完成，安全私密。在Google Play免费下载。' },
+    ar: { title: 'DupeFire – حذف الملفات المكررة على Android | مجاني', desc: 'يكتشف DupeFire ويحذف الملفات المكررة على جهاز Android: الصور ومقاطع الفيديو والمستندات. جميع المعالجة محلية. تنزيل مجاني من Google Play.' },
+    pt: { title: 'DupeFire – Remover Arquivos Duplicados no Android | Grátis', desc: 'DupeFire encontra e remove arquivos duplicados no seu Android: fotos, vídeos e documentos. Todo o processamento é local e privado. Download gratuito no Google Play.' }
   };
 
   function setLang(lang) {
     document.body.className = 'lang-' + lang;
     document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
     document.querySelectorAll('.lang-btn').forEach(function(btn) {
       btn.classList.remove('active');
     });
     document.querySelector('.lang-btn[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
-    document.title = _meta[lang].title;
-    var desc = document.querySelector('meta[name="description"]');
-    if (desc) desc.setAttribute('content', _meta[lang].desc);
+    if (_meta[lang]) {
+      document.title = _meta[lang].title;
+      var desc = document.querySelector('meta[name="description"]');
+      if (desc) desc.setAttribute('content', _meta[lang].desc);
+    }
   }
 </script>
 
