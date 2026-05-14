@@ -3,8 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>DupeFire – Encuentra y elimina duplicados</title>
-  <meta name="description" content="DupeFire detecta y elimina archivos duplicados en tu Android: fotos, vídeos y documentos. Todo el procesamiento es local y privado."/>
+  <title>DupeFire – Elimina Archivos Duplicados en Android | Gratis</title>
+  <meta name="description" content="DupeFire detecta y elimina archivos duplicados en tu Android: fotos, vídeos y documentos. Todo el procesamiento es local y privado. Descarga gratis en Google Play."/>
+  <meta name="author" content="Daniel Barea"/>
+  <meta name="theme-color" content="#1a1a2e"/>
+
+  <!-- Canonical & hreflang -->
+  <link rel="canonical" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+  <meta property="og:title" content="DupeFire – Elimina Archivos Duplicados en Android"/>
+  <meta property="og:description" content="Detecta y elimina archivos duplicados en tu Android. Fotos, vídeos y documentos — procesado localmente, sin subir nada a la nube. Descarga gratis."/>
+  <meta property="og:locale" content="es_ES"/>
+  <meta property="og:locale:alternate" content="en_US"/>
+  <meta property="og:site_name" content="DupeFire"/>
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="DupeFire – Elimina Archivos Duplicados en Android"/>
+  <meta name="twitter:description" content="Detecta y elimina archivos duplicados en tu Android. Fotos, vídeos y documentos — procesado localmente, sin subir nada a la nube. Gratis en Google Play."/>
+
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "DupeFire",
+    "description": "DupeFire detecta y elimina archivos duplicados en tu Android: fotos, vídeos y documentos. Todo el procesamiento es local y privado.",
+    "operatingSystem": "Android",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Daniel Barea",
+      "email": "danibarea@gmail.com"
+    },
+    "url": "https://neoacid-dbl.github.io/DupeFire/app.html",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.danib.duplicados",
+    "inLanguage": ["es", "en"],
+    "isAccessibleForFree": true,
+    "featureList": [
+      "Detección de fotos duplicadas",
+      "Detección de vídeos duplicados",
+      "Detección de documentos duplicados",
+      "Compresión de imágenes y vídeos",
+      "Procesamiento 100% local y privado",
+      "Sin subida de archivos a la nube"
+    ]
+  }
+  </script>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -480,6 +540,17 @@
 </footer>
 
 <script>
+  var _meta = {
+    es: {
+      title: 'DupeFire – Elimina Archivos Duplicados en Android | Gratis',
+      desc: 'DupeFire detecta y elimina archivos duplicados en tu Android: fotos, vídeos y documentos. Todo el procesamiento es local y privado. Descarga gratis en Google Play.'
+    },
+    en: {
+      title: 'DupeFire – Remove Duplicate Files on Android | Free',
+      desc: 'DupeFire finds and removes duplicate files on your Android: photos, videos and documents. All processing is local and private. Download free on Google Play.'
+    }
+  };
+
   function setLang(lang) {
     document.body.className = 'lang-' + lang;
     document.documentElement.lang = lang;
@@ -487,6 +558,9 @@
       btn.classList.remove('active');
     });
     document.querySelector('.lang-btn[onclick="setLang(\'' + lang + '\')"]').classList.add('active');
+    document.title = _meta[lang].title;
+    var desc = document.querySelector('meta[name="description"]');
+    if (desc) desc.setAttribute('content', _meta[lang].desc);
   }
 </script>
 

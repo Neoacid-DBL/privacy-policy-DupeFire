@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/app.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/"/>
+    <lastmod>2026-04-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
