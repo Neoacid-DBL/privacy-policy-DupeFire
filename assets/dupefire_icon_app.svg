@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"></stop>
+      <stop offset="100%" stop-color="#FF0844"></stop>
+    </linearGradient>
+    <linearGradient id="fireGrad" x1="50%" y1="100%" x2="50%" y2="0%" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF0844"></stop>
+      <stop offset="60%" stop-color="#FF6B35"></stop>
+      <stop offset="100%" stop-color="#FFD700"></stop>
+    </linearGradient>
+  </defs>
+  <rect width="200" height="200" rx="44" fill="url(#bgGrad)"></rect>
+  <rect x="38" y="55" width="72" height="90" rx="8" fill="rgba(255,255,255,0.25)" stroke="rgba(255,255,255,0.5)" stroke-width="2"></rect>
+  <line x1="52" y1="78" x2="96" y2="78" stroke="rgba(255,255,255,0.5)" stroke-width="4" stroke-linecap="round"></line>
+  <line x1="52" y1="92" x2="90" y2="92" stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-linecap="round"></line>
+  <line x1="52" y1="106" x2="84" y2="106" stroke="rgba(255,255,255,0.25)" stroke-width="3" stroke-linecap="round"></line>
+  <rect x="62" y="38" width="72" height="90" rx="8" fill="white" opacity="0.95"></rect>
+  <line x1="78" y1="62" x2="120" y2="62" stroke="#FF6B35" stroke-width="4" stroke-linecap="round"></line>
+  <line x1="78" y1="76" x2="114" y2="76" stroke="#FF8C60" stroke-width="3" stroke-linecap="round"></line>
+  <line x1="78" y1="90" x2="108" y2="90" stroke="#FF8C60" stroke-width="3" stroke-linecap="round"></line>
+  <path d="M118 158 C113 145 122 136 118 122 C126 130 130 140 127 150 C131 142 130 132 125 122 C134 128 140 140 136 152 C139 156 136 164 128 166 C120 166 116 162 118 158Z" fill="url(#fireGrad)"></path>
+</svg>
