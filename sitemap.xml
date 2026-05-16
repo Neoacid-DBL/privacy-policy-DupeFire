@@ -3,23 +3,6 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://neoacid-dbl.github.io/DupeFire/app.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
-    <xhtml:link rel="alternate" hreflang="hi" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
-    <xhtml:link rel="alternate" hreflang="zh" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
-    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/app.html"/>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
     <loc>https://neoacid-dbl.github.io/DupeFire/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/"/>
@@ -31,7 +14,24 @@
     <xhtml:link rel="alternate" hreflang="ar" href="https://neoacid-dbl.github.io/DupeFire/"/>
     <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/"/>
-    <lastmod>2026-04-27</lastmod>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://neoacid-dbl.github.io/DupeFire/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://neoacid-dbl.github.io/DupeFire/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://neoacid-dbl.github.io/DupeFire/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://neoacid-dbl.github.io/DupeFire/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://neoacid-dbl.github.io/DupeFire/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://neoacid-dbl.github.io/DupeFire/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://neoacid-dbl.github.io/DupeFire/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://neoacid-dbl.github.io/DupeFire/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://neoacid-dbl.github.io/DupeFire/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://neoacid-dbl.github.io/DupeFire/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://neoacid-dbl.github.io/DupeFire/privacy.html"/>
+    <lastmod>2026-05-16</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
